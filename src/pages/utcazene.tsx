@@ -1,6 +1,8 @@
 import * as React from "react"
 import type { HeadFC, PageProps } from "gatsby"
 import styled from 'styled-components';
+import { SiYoutube } from 'react-icons/si'
+import { SlSocialFacebook, SlSocialInstagram, SlSocialSpotify } from 'react-icons/sl'
 
 const MainStyles = styled.main`
   min-height: 100%;
@@ -24,6 +26,7 @@ const Links = styled.ul`
   list-style-type: none;
   padding: 0;
   display: flex;
+  flex-wrap: wrap;
   gap: 16px;
   justify-content: center;
 
@@ -86,6 +89,23 @@ const Signature = styled.p`
   margin: 0;
   line-height: 0.4;
   color: var(--blue-ink);
+`;
+
+const SocialWrapper = styled.div`
+  display: flex;
+  gap: 8px;
+`;
+
+const IconWrapper = styled.a`
+  background-color: var(--icon-color);
+  width: 50px;  
+  height: 50px; 
+  border-radius: 50%;
+  display: grid; 
+  place-content: center;
+  cursor: pointer;
+  box-shadow: var(--icon-wrapper-box-shadow);
+  transition: transform 0.25s ease-in-out;
 `;
 
 const UtcazenePage: React.FC<PageProps> = () => {
@@ -158,6 +178,36 @@ const UtcazenePage: React.FC<PageProps> = () => {
           Hunor
         </Signature>
         <p>Feed the Mogul</p>
+        <SocialWrapper>
+          <IconWrapper 
+            href="https://open.spotify.com/artist/0sIHN7AhJVinHJak74LClq?si=DzI9EyYQRpGEts1SuwugXg&dd=1" 
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            <SlSocialSpotify size={30} />
+          </IconWrapper>
+          <IconWrapper 
+            href="https://www.instagram.com/feedthemogul" 
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            <SlSocialInstagram size={30} />
+          </IconWrapper>
+          <IconWrapper 
+            href="https://www.facebook.com/feedthemogul" 
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            <SlSocialFacebook size={30} />
+          </IconWrapper>
+          <IconWrapper 
+            href="https://www.youtube.com/@FeedTheMogul" 
+            target="_blank"
+            rel="noopener noreferrer"
+            >
+            <SiYoutube size={30} />
+          </IconWrapper>
+      </SocialWrapper>
         <hr />
         <h2 id='introduction'>Bemutatkozás</h2>
         <p>
