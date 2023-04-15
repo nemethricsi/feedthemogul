@@ -20,6 +20,31 @@ const Letter = styled.div`
   gap: 20px;
 `;
 
+const Links = styled.ul`
+  list-style-type: none;
+  padding: 0;
+  display: flex;
+  gap: 16px;
+  justify-content: center;
+
+  li {
+    color: white;
+    background-color: hsla(181, 87%, 37%, 1);
+    border-radius: 8px;
+    
+    &:hover {
+      background-color: hsla(181, 87%, 47%, 1);
+    }
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    background: none;
+    padding: 6px 12px;
+  }
+`;
+
 const IframeWrapper = styled.div`
   position: relative;
   padding-bottom: 56.25%; /* 16:9 */
@@ -40,22 +65,26 @@ const PressList = styled.ul`
   gap: 0.5rem;
   list-style-type: none;
 
-  & li::marker {
-    content: "\1F3B8  ";
+  a {
+    background: none;
+  }
+
+  li::marker {
+    content: "🎸 ";
   }
 `;
 
 const Greeting = styled.p`
   font-size: 120%; 
   margin: 0; 
-  margin-bottom: 1.5rem;
+  margin-top: 1.5rem;
 `;
 
 const Signature = styled.p`
   font-family: 'Reenie Beanie', cursive;
   font-size: 60px;
   margin: 0;
-  line-height: 0.6;
+  line-height: 0.4;
   color: var(--blue-ink);
 `;
 
@@ -63,11 +92,25 @@ const UtcazenePage: React.FC<PageProps> = () => {
   return (
     <MainStyles>
       <Letter>
+        <Links>
+          <li>
+            <a href='#acoustic-video'>Látható és hallható</a>
+          </li>
+          <li>
+            <a href='#introduction'>Bemutatkozás</a>
+          </li>
+          <li>
+            <a href='#references'>Egyéb referenciák</a>
+          </li>
+          <li>
+            <a href='#contact'>Elérhetőségek</a>
+          </li>
+        </Links>
         <Greeting>
           Tisztelt Utcazene Szervezők!
         </Greeting>
         <p>
-          Ipolyi-Gáts Hunor vagyok a <span>Feed the Mogulból</span>.
+          <strong>Ipolyi-Gáts Hunor</strong> vagyok a <span>Feed the Mogulból</span>.
           Zenekarunk akusztik műsorra társult{' '}
           <a
             href="https://www.instagram.com/lenkke_/"
@@ -76,7 +119,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
             >Lenkke_</a
           >-vel, és ezúton szeretnénk jelentkezni a 2023-as Utcazene Fesztiválra.
         </p>
-        <p>Akusztikus bemutatkozásunk (playlist):</p>
+        <h2 id='acoustic-video'>Akusztikus bemutatkozásunk (playlist):</h2>
         <IframeWrapper>
           <iframe
             src="https://www.youtube.com/embed/videoseries?list=PLy-qNPoQEFCLC8xWf2TP_Smlr53PputhK"
@@ -115,8 +158,31 @@ const UtcazenePage: React.FC<PageProps> = () => {
           Hunor
         </Signature>
         <p>Feed the Mogul</p>
-        <p>Sajtómegjelenések:</p>
+        <hr />
+        <h2 id='introduction'>Bemutatkozás</h2>
+        <p>
+          A Feed The Mogul egy fiatal rockzenekar Budapestről. Az energikus és
+          húzós tempójú zenéjük mélyen behatol az ember lelkébe, ám képesek
+          akusztikus hangszereken is játszani, megmutatva sokoldalúságukat.
+          Zenéjükben keverednek a grunge, a punk és a stoner elemek, így egyedi és
+          megragadó hangzást hoznak létre. Szövegeik kritikusak, amelyek néha a
+          kihívásokkal teli világunkról, máskor éppen annak egyszerűségéről
+          szólnak. A banda tagjai a Kőbányai Zeneiskolában találkoztak, onnan
+          indították útjára a Mogult 2017-ben. A Feed The Mogul egy igazi
+          tehetséges és ígéretes zenekar, akik már most óriási hatást gyakorolnak
+          a zenei színtéren, és izgalmas jövő előtt állnak.
+        </p>
+        <h2 id='references'>Sajtómegjelenések:</h2>
         <PressList>
+          <li>
+            <a
+              href="https://langolo.hu/post-office-loive-session-a-feed-the-mogultol"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'block' }}
+              >Post Office – Live session a Feed The Mogultól (Lángoló)</a
+            >
+          </li>
           <li>
             <a
               href="https://keretblog.hu/feed-the-modul-klippremier"
@@ -133,8 +199,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
               target="_blank"
               rel="noopener noreferrer"
               style={{ display: 'block' }}
-              >Itt az első Feed The Mogul EP, és már készül a második (Lángoló
-              Gitárok)</a
+              >Itt az első Feed The Mogul EP, és már készül a második (Lángoló)</a
             >
           </li>
         </PressList>
@@ -150,6 +215,15 @@ const UtcazenePage: React.FC<PageProps> = () => {
           allowFullScreen
         />
         </IframeWrapper>
+        <hr />
+        <div>
+          <h2 id='contact'>
+            Elérhetőségek
+          </h2>
+          <p><strong>Email:</strong> hello@feedthemogul.com</p>
+          <p><strong>Menedzser:</strong> Németh Richárd</p>
+          <p><strong>Telefonszám:</strong> +36 20 936 9932</p>
+        </div>
       </Letter>
     </MainStyles>
   )

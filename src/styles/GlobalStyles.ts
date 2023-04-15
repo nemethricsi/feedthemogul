@@ -34,7 +34,7 @@ const GlobalStyles = createGlobalStyle`
   */
 
   body {
-      line-height: 1.5;
+      line-height: 1.625;
       -webkit-font-smoothing: antialiased;
   }
 
@@ -85,9 +85,29 @@ const GlobalStyles = createGlobalStyle`
       rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: var(--gray-background);
     font-family: "Rubik", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+  }
+
+  a {
+    color: inherit;
+    text-decoration: none;
+    font-weight: 500;
+    background: linear-gradient(
+      -100deg,
+      hsla(48, 92%, 75%, 0.3),
+      hsla(48, 92%, 75%, 0.7) 95%,
+      hsla(48, 92%, 75%, 0.1)
+    );
+  }
+
+  a:hover {
+    text-decoration: underline;
   }
 `;
 
