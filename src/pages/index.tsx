@@ -1,11 +1,19 @@
-import * as React from "react"
-import type { HeadFC, PageProps } from "gatsby"
+import * as React from "react";
+import type { HeadFC, PageProps } from "gatsby";
+import styled from 'styled-components';
+import { StaticImage } from "gatsby-plugin-image"
+
+const MainStyles = styled.main`
+  min-height: 100%;
+  display: grid;
+  place-content: center;
+`;
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <main>
-      <h1>Feed The Mogul</h1>
-    </main>
+    <MainStyles>
+      <StaticImage src="../images/ftm-logo.jpeg" alt="Feed The Mogul logo" style={{borderRadius: '50%', width: 250}} />
+    </MainStyles>
   )
 }
 
