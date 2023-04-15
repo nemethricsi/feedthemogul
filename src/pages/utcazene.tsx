@@ -253,7 +253,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
             >
           </li>
         </PressList>
-        <p>Ui.: így szólunk nem akusztikus felállásban:</p>
+        <p>Ui.: így szólunk nem akusztikus felállásban (playlist):</p>
         <p>Ezt az élőben feljátszott anyagot 2022-ben rögzítettük a Sounday
           Studióban Vastag "Vasti" Gáborral, jelenleg még nem publikus.</p>
         <IframeWrapper>
