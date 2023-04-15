@@ -1,7 +1,8 @@
 import * as React from "react";
-import type { HeadFC, PageProps } from "gatsby";
+import type {  PageProps } from "gatsby";
 import styled from 'styled-components';
 import { StaticImage } from "gatsby-plugin-image"
+import Seo from '../components/Seo';
 
 const MainStyles = styled.main`
   min-height: 100%;
@@ -11,12 +12,13 @@ const MainStyles = styled.main`
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
-    <MainStyles>
-      <StaticImage src="../images/ftm-logo.jpeg" alt="Feed The Mogul logo" style={{borderRadius: '50%', width: 250}} />
-    </MainStyles>
+    <>
+      <Seo title='Főoldal' />
+      <MainStyles>
+        <StaticImage src="../assets/images/ftm-logo.jpeg" alt="Feed The Mogul logo" style={{borderRadius: '50%', width: 250}} />
+      </MainStyles>
+    </>
   )
 }
 
 export default IndexPage
-
-export const Head: HeadFC = () => <title>Home Page</title>

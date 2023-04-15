@@ -3,6 +3,7 @@ import type { HeadFC, PageProps } from "gatsby"
 import styled from 'styled-components';
 import { SiYoutube } from 'react-icons/si'
 import { SlSocialFacebook, SlSocialInstagram, SlSocialSpotify } from 'react-icons/sl'
+import Seo from '../components/Seo';
 
 const MainStyles = styled.main`
   min-height: 100%;
@@ -111,6 +112,7 @@ const IconWrapper = styled.a`
 const UtcazenePage: React.FC<PageProps> = () => {
   return (
     <MainStyles>
+      <Seo title='Utcazene pályázat' />
       <Letter>
         <Links>
           <li>
