@@ -1,6 +1,7 @@
 import * as React from "react";
 import SubscriptionWidget from '../components/SubscriptionWIdget';
 import styled from 'styled-components';
+import Seo from '../components/Seo';
 
 const MainStyles = styled.main`
   min-height: 100%;
@@ -16,11 +17,14 @@ const MainStyles = styled.main`
 `;
 
 const Subscribe = () => {
-    return (
-        <MainStyles>
-            <SubscriptionWidget />
-        </MainStyles>
-    )
+  return (
+    <>
+      <Seo title="Subscribe" />
+      <MainStyles>
+        <SubscriptionWidget />
+      </MainStyles>
+    </>
+  )
 }
 
 export default Subscribe;
