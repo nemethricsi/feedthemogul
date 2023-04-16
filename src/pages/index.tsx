@@ -203,7 +203,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Seo title='Főoldal' />
       <MainStyles>
         <ImageWrapper>
-          <StaticImage src="../assets/images/ftm-logo.jpeg" alt="Feed The Mogul logo" imgStyle={{ borderRadius: '20%' }} />
+          <StaticImage src="../assets/images/ftm-logo.jpeg" alt="Feed The Mogul logo" imgStyle={{ borderRadius: '50%' }} />
         </ImageWrapper>
         <SocialIcons>
           <IconWrapper 
