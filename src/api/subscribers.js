@@ -1,12 +1,27 @@
-// import fetch from "node-fetch";
-// import MailerLite from '@mailerlite/mailerlite-nodejs';
+import MailerLite from '@mailerlite/mailerlite-nodejs';
+import { groups } from './constants'
 
-// const mailerlite = new MailerLite({
-//   api_key: process.env.MAILER_LITE_API_KEY
-// });
+const mailerlite = new MailerLite({
+  api_key: process.env.MAILER_LITE_API_KEY
+});
 
 export default async function handler(req, res) {
-  res.status(200).json({result: 'OK'});
+  const { email, name } = req.body;
+  const params = {
+    email,
+    fields: { name },
+    groups: [groups.HUNGARIAN],
+  }
+  mailerlite.subscribers.createOrUpdate(params).then(response => {
+    if(response.status === 200) {
+      res.status(200).json({ message: 'Subscriber already exists.' });
+    } else if (response.status === 201) {
+      res.status(201).json(response.data);
+    }
+  }).catch(error => {
+    console.error(error);
+    res.status(400).json(error.response.data);
+  })
 }
 
 // const params = {

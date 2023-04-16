@@ -9,6 +9,11 @@ const MainStyles = styled.main`
   min-height: 100%;
   padding-top: 3rem;
   padding-bottom: 3rem;
+  
+  @media (max-width: 800px) {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
 `;
 
 const Letter = styled.div`
@@ -21,6 +26,10 @@ const Letter = styled.div`
   display: flex;
   flex-direction: column;
   gap: 20px;
+
+  @media (max-width: 800px) {
+    padding: 16px;
+  }
 `;
 
 const Links = styled.ul`
@@ -33,11 +42,11 @@ const Links = styled.ul`
 
   li {
     color: white;
-    background-color: hsla(181, 87%, 37%, 1);
+    background-color: var(--red);
     border-radius: 8px;
     
     &:hover {
-      background-color: hsla(181, 87%, 47%, 1);
+      background-color: red;
     }
   }
 
@@ -272,9 +281,9 @@ const UtcazenePage: React.FC<PageProps> = () => {
           <h2 id='contact'>
             Elérhetőségek
           </h2>
-          <p><strong>Email:</strong> hello@feedthemogul.com</p>
+          <p><strong>Email:</strong> <a href="mailto:hello@feedthemogul.com">hello@feedthemogul.com</a></p>
           <p><strong>Menedzser:</strong> Németh Richárd</p>
-          <p><strong>Telefonszám:</strong> +36 20 936 9932</p>
+          <p><strong>Telefonszám:</strong> <a href="tel:+36209369932">+36 20 936 9932</a></p>
         </div>
       </Letter>
     </MainStyles>

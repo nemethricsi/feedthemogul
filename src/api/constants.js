@@ -1,0 +1,4 @@
+export const groups = {
+    HUNGARIAN: '85315132092056630',
+    ENGLISH: '85315137292993714'
+}

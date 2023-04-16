@@ -80,6 +80,8 @@ const GlobalStyles = createGlobalStyle`
   :root {
     --gray-background: #f0f2f5;
     --white: #fff;
+    --black: #2e2e2e;
+    --red: #D92A1C;
     --blue-ink: #0039a6;
     --box-shadow-paper: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
       rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
@@ -92,6 +94,7 @@ const GlobalStyles = createGlobalStyle`
   body {
     background-color: var(--gray-background);
     font-family: "Rubik", -apple-system, BlinkMacSystemFont, avenir next, avenir, segoe ui, helvetica neue, helvetica, Cantarell, Ubuntu, roboto, noto, arial, sans-serif;
+    color: var(--black);
   }
 
   a {
@@ -104,6 +107,7 @@ const GlobalStyles = createGlobalStyle`
       hsla(48, 92%, 75%, 0.7) 95%,
       hsla(48, 92%, 75%, 0.1)
     );
+    padding: 2px 4px;
   }
 
   a:hover {
