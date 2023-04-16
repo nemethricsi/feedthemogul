@@ -12,6 +12,10 @@ const MainStyles = styled.main`
   min-height: 100%;
   display: grid;
   place-content: center;
+
+  @media (max-width: 800px) {
+    padding-top: 2.5rem;
+  }
 `;
 
 const ImageWrapper = styled.div`
@@ -55,8 +59,7 @@ const FormWrapper = styled.div`
     padding: 8px 16px;
     border-radius: 8px;
     border: 1px solid gray;
-    background-color: var(--gray-background);
-    background-color: #f0f2f5;
+    background-color: #fffffa;
     width: 250px;
     font-size: 16px;
     
@@ -75,31 +78,34 @@ const FormWrapper = styled.div`
     }
   }
 
-  input[type="submit"] {
+  button[type="submit"] {
+    border: none;
+    padding: 8px 16px;
+    border-radius: 8px;
     color: var(--white, white);
     background: var(--red);
-    border: none;
     cursor: pointer;
     width: 150px;
     font-weight: 500;
-    
+
     &:hover{
       background: red;
     }
 
     &:disabled {
       background: lightgray;
-      color: #ccc;
+      color: #eee;
     }
 
     @media (max-width: 800px) {
-      align-self: center;
+      width: 100%;
+      padding: 10px 20px;
     }
   }
 
   @media (max-width: 800px) {
     border-radius: 0;
-    padding: 2.5rem;
+    padding: 2rem;
   }
 `;
 
@@ -277,7 +283,7 @@ const IndexPage: React.FC<PageProps> = () => {
           <form onSubmit={handleSubmit}>
               <input type='name' name='firstName' placeholder="Keresztneved" disabled={loading} />
               <input type='email' name='email' required placeholder="E-mail címed" disabled={loading} />
-              <input type='submit' value={loading ? 'Küldés...' : 'Feliratkozás'} disabled={loading} />
+              <button type="submit" disabled={loading}>{loading ? 'Küldés...' : 'Feliratkozás'}</button> 
           </form>
         </FormWrapper>
       </MainStyles>
