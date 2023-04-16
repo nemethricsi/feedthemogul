@@ -21,6 +21,16 @@ const ImageWrapper = styled.div`
   border-radius: 50%;
 `;
 
+const Subtitle = styled.p`
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+
+  @media (max-width: 800px) {
+    font-size: 16px;
+  }
+`
+
 const FormWrapper = styled.div`
   background-color: white;
   padding: 1rem;
@@ -205,6 +215,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <ImageWrapper>
           <StaticImage src="../assets/images/ftm-logo.jpeg" alt="Feed The Mogul logo" imgStyle={{ borderRadius: '50%' }} />
         </ImageWrapper>
+        <Subtitle>Budapest based grunge-stoner-punk rock</Subtitle>
         <SocialIcons>
           <IconWrapper 
             href="https://feedthemogul.bandcamp.com"
