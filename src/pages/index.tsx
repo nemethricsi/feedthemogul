@@ -213,7 +213,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <Seo title='Főoldal' />
       <MainStyles>
         <ImageWrapper>
-          <StaticImage src="../assets/images/ftm-logo.jpeg" alt="Feed The Mogul logo" imgStyle={{ borderRadius: '50%' }} />
+          <StaticImage src="../assets/images/ftm-logo.jpeg" alt="Feed The Mogul logo" style={{ borderRadius: '50%' }} />
         </ImageWrapper>
         <Subtitle>Budapest based grunge-stoner-punk rock</Subtitle>
         <SocialIcons>
@@ -263,7 +263,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <FormWrapper >
           <FormTextWrapper>
             <SubscriptionImageWrapper>
-              <StaticImage src="../assets/images/ftm-hug.jpg" alt="Feed The Mogul logo" imgStyle={{ borderRadius: '50%', width: '100%' }} />
+              <StaticImage src="../assets/images/ftm-hug.jpg" alt="Feed The Mogul logo" style={{ borderRadius: '50%', width: '100%' }} />
             </SubscriptionImageWrapper>
             <div className="text-holder">
               <h2>Ne maradj le!</h2>
