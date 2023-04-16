@@ -37,6 +37,15 @@ const config: GatsbyConfig = {
         icon: 'src/assets/images/favicon.png',
       },
     },
+    {
+      resolve: `gatsby-plugin-google-gtag`,
+      options: {
+        trackingIds: ["G-CYWTWGYX94"],
+        pluginConfig: {
+          head: true,
+        },
+      },
+    },
   ]
 };
 
