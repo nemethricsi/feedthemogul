@@ -18,6 +18,7 @@ const ImageWrapper = styled.div`
   justify-self: center;
   margin-bottom: 1rem;
   width: 200px;
+  border-radius: 50%;
 `;
 
 const FormWrapper = styled.div`
