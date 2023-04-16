@@ -3,7 +3,7 @@ import type {  PageProps } from "gatsby";
 import styled from 'styled-components';
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from '../components/Seo';
-import SubscriptionWidget from '../components/SubscriptionWIdget';
+import SubscriptionWidget from '../components/SubscriptionWidget';
 import { SiBandcamp,  SiYoutube } from 'react-icons/si'
 import { SlSocialFacebook, SlSocialInstagram, SlSocialSpotify, SlSocialSoundcloud } from 'react-icons/sl'
 
