@@ -107,7 +107,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <SlSocialFacebook size={30} />
           </IconWrapper>
           <IconWrapper 
-            href="https://www.youtube.com/@FeedTheMogul"
+            href="https://www.youtube.com/@FeedTheMogul?sub_confirmation=1"
             target="_blank"
             rel='noopener noreferrer'
             >
