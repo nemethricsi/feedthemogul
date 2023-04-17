@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from '../components/Seo';
 import SubscriptionWidget from '../components/SubscriptionWidget';
-import { SiBandcamp,  SiYoutube } from 'react-icons/si'
+import { SiBandcamp,  SiYoutube, SiDeezer } from 'react-icons/si'
 import { SlSocialFacebook, SlSocialInstagram, SlSocialSpotify, SlSocialSoundcloud } from 'react-icons/sl'
 
 const MainStyles = styled.main`
@@ -119,6 +119,13 @@ const IndexPage: React.FC<PageProps> = () => {
             rel='noopener noreferrer'
             >
             <SlSocialSoundcloud size={30} />
+          </IconWrapper>
+          <IconWrapper 
+            href="https://deezer.page.link/g7AwwPdB6P6QjfgdA"
+            target="_blank"
+            rel='noopener noreferrer'
+            >
+            <SiDeezer size={30} />
           </IconWrapper>
         </SocialIcons>
         <SubscriptionWidget />
