@@ -1,4 +1,4 @@
-import * as React from "react";
+import * as React from 'react';
 import SubscriptionWidget from '../components/SubscriptionWidget';
 import styled from 'styled-components';
 import Seo from '../components/Seo';
@@ -8,7 +8,7 @@ const MainStyles = styled.main`
   display: grid;
   place-content: start center;
   padding-top: 5rem;
-  
+
   @media (max-width: 800px) {
     padding-top: 0;
     height: 100%;
@@ -24,7 +24,7 @@ const Subscribe = () => {
         <SubscriptionWidget />
       </MainStyles>
     </>
-  )
-}
+  );
+};
 
 export default Subscribe;

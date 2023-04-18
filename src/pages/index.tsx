@@ -1,11 +1,16 @@
-import * as React from "react";
-import type {  PageProps } from "gatsby";
+import * as React from 'react';
+import type { PageProps } from 'gatsby';
 import styled from 'styled-components';
-import { StaticImage } from "gatsby-plugin-image"
+import { StaticImage } from 'gatsby-plugin-image';
 import Seo from '../components/Seo';
 import SubscriptionWidget from '../components/SubscriptionWidget';
-import { SiBandcamp,  SiYoutube, SiDeezer } from 'react-icons/si'
-import { SlSocialFacebook, SlSocialInstagram, SlSocialSpotify, SlSocialSoundcloud } from 'react-icons/sl'
+import { SiBandcamp, SiYoutube, SiDeezer } from 'react-icons/si';
+import {
+  SlSocialFacebook,
+  SlSocialInstagram,
+  SlSocialSpotify,
+  SlSocialSoundcloud,
+} from 'react-icons/sl';
 
 const MainStyles = styled.main`
   min-height: 100%;
@@ -32,10 +37,10 @@ const Subtitle = styled.p`
   @media (max-width: 800px) {
     font-size: 16px;
   }
-`
+`;
 
 const SocialIcons = styled.div`
-  padding: 20px; 
+  padding: 20px;
   margin-bottom: 5rem;
   display: flex;
   flex-wrap: wrap;
@@ -49,10 +54,10 @@ const SocialIcons = styled.div`
 
 const IconWrapper = styled.a`
   background: white;
-  width: 50px;  
-  height: 50px; 
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
-  display: grid; 
+  display: grid;
   place-content: center;
   cursor: pointer;
   box-shadow: var(--icon-wrapper-box-shadow);
@@ -63,7 +68,7 @@ const IconWrapper = styled.a`
   }
 
   @media (max-width: 800px) {
-    width: 60px;  
+    width: 60px;
     height: 60px;
   }
 `;
@@ -71,67 +76,72 @@ const IconWrapper = styled.a`
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <>
-      <Seo title='Főoldal' />
+      <Seo title="Főoldal" />
       <MainStyles>
         <ImageWrapper>
-          <StaticImage src="../assets/images/ftm-logo.jpeg" alt="Feed The Mogul logo" style={{ borderRadius: '50%' }} imgStyle={{ borderRadius: '50%' }} />
+          <StaticImage
+            src="../assets/images/ftm-logo.jpeg"
+            alt="Feed The Mogul logo"
+            style={{ borderRadius: '50%' }}
+            imgStyle={{ borderRadius: '50%' }}
+          />
         </ImageWrapper>
         <Subtitle>Grunge-stoner-punk rock Budapestről</Subtitle>
         <SocialIcons>
-          <IconWrapper 
+          <IconWrapper
             href="https://feedthemogul.bandcamp.com"
             target="_blank"
-            rel='noopener noreferrer'
-            >
+            rel="noopener noreferrer"
+          >
             <SiBandcamp size={30} />
           </IconWrapper>
-          <IconWrapper 
+          <IconWrapper
             href="https://open.spotify.com/artist/0sIHN7AhJVinHJak74LClq?si=DzI9EyYQRpGEts1SuwugXg&dd=1"
             target="_blank"
-            rel='noopener noreferrer'
-            >
+            rel="noopener noreferrer"
+          >
             <SlSocialSpotify size={30} />
           </IconWrapper>
-          <IconWrapper 
+          <IconWrapper
             href="https://www.instagram.com/feedthemogul"
             target="_blank"
-            rel='noopener noreferrer'
-            >
+            rel="noopener noreferrer"
+          >
             <SlSocialInstagram size={30} />
           </IconWrapper>
-          <IconWrapper 
+          <IconWrapper
             href="https://www.facebook.com/feedthemogul"
             target="_blank"
-            rel='noopener noreferrer'
-            >
+            rel="noopener noreferrer"
+          >
             <SlSocialFacebook size={30} />
           </IconWrapper>
-          <IconWrapper 
+          <IconWrapper
             href="https://www.youtube.com/@FeedTheMogul?sub_confirmation=1"
             target="_blank"
-            rel='noopener noreferrer'
-            >
+            rel="noopener noreferrer"
+          >
             <SiYoutube size={30} />
           </IconWrapper>
-          <IconWrapper 
+          <IconWrapper
             href="https://soundcloud.com/user-512421796"
             target="_blank"
-            rel='noopener noreferrer'
-            >
+            rel="noopener noreferrer"
+          >
             <SlSocialSoundcloud size={30} />
           </IconWrapper>
-          <IconWrapper 
+          <IconWrapper
             href="https://deezer.page.link/g7AwwPdB6P6QjfgdA"
             target="_blank"
-            rel='noopener noreferrer'
-            >
+            rel="noopener noreferrer"
+          >
             <SiDeezer size={30} />
           </IconWrapper>
         </SocialIcons>
         <SubscriptionWidget />
       </MainStyles>
     </>
-  )
-}
+  );
+};
 
-export default IndexPage
+export default IndexPage;
