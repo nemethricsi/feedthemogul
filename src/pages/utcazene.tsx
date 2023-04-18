@@ -237,6 +237,15 @@ const UtcazenePage: React.FC<PageProps> = () => {
         <PressList>
           <li>
             <a
+              href="https://f21.hu/zene/feed_the_mogul_interju"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'block' }}
+              >„Kimos mindent a fejedből és megtisztít” – Feed The Mogul-interjú (F21)
+            </a>
+          </li>
+          <li>
+            <a
               href="https://langolo.hu/post-office-loive-session-a-feed-the-mogultol"
               target="_blank"
               rel="noopener noreferrer"
