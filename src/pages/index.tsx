@@ -4,7 +4,7 @@ import styled from 'styled-components';
 import { StaticImage } from "gatsby-plugin-image"
 import Seo from '../components/Seo';
 import SubscriptionWidget from '../components/SubscriptionWidget';
-import { SiBandcamp,  SiYoutube } from 'react-icons/si'
+import { SiBandcamp,  SiYoutube, SiDeezer } from 'react-icons/si'
 import { SlSocialFacebook, SlSocialInstagram, SlSocialSpotify, SlSocialSoundcloud } from 'react-icons/sl'
 
 const MainStyles = styled.main`
@@ -76,7 +76,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <ImageWrapper>
           <StaticImage src="../assets/images/ftm-logo.jpeg" alt="Feed The Mogul logo" style={{ borderRadius: '50%' }} imgStyle={{ borderRadius: '50%' }} />
         </ImageWrapper>
-        <Subtitle>Budapest based grunge-stoner-punk rock</Subtitle>
+        <Subtitle>Grunge-stoner-punk rock Budapestről</Subtitle>
         <SocialIcons>
           <IconWrapper 
             href="https://feedthemogul.bandcamp.com"
@@ -107,7 +107,7 @@ const IndexPage: React.FC<PageProps> = () => {
             <SlSocialFacebook size={30} />
           </IconWrapper>
           <IconWrapper 
-            href="https://www.youtube.com/@FeedTheMogul"
+            href="https://www.youtube.com/@FeedTheMogul?sub_confirmation=1"
             target="_blank"
             rel='noopener noreferrer'
             >
@@ -119,6 +119,13 @@ const IndexPage: React.FC<PageProps> = () => {
             rel='noopener noreferrer'
             >
             <SlSocialSoundcloud size={30} />
+          </IconWrapper>
+          <IconWrapper 
+            href="https://deezer.page.link/g7AwwPdB6P6QjfgdA"
+            target="_blank"
+            rel='noopener noreferrer'
+            >
+            <SiDeezer size={30} />
           </IconWrapper>
         </SocialIcons>
         <SubscriptionWidget />
