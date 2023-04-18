@@ -16,9 +16,12 @@ const MainStyles = styled.main`
   min-height: 100%;
   display: grid;
   place-content: center;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 
   @media (max-width: 800px) {
     padding-top: 2.5rem;
+    padding-bottom: 0;
   }
 `;
 
