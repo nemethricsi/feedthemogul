@@ -1,9 +1,8 @@
-import * as React from "react";
-import type { FormEvent } from "react";
+import * as React from 'react';
+import type { FormEvent } from 'react';
 import styled from 'styled-components';
-import { StaticImage } from "gatsby-plugin-image";
+import { StaticImage } from 'gatsby-plugin-image';
 import { toast } from 'react-toastify';
-
 
 const FormWrapper = styled.div`
   background-color: white;
@@ -32,7 +31,7 @@ const FormWrapper = styled.div`
     background-color: #fffffa;
     width: 250px;
     font-size: 16px;
-    
+
     &::placeholder {
       font-weight: 400;
     }
@@ -48,7 +47,7 @@ const FormWrapper = styled.div`
     }
   }
 
-  button[type="submit"] {
+  button[type='submit'] {
     border: none;
     padding: 8px 16px;
     border-radius: 8px;
@@ -58,7 +57,7 @@ const FormWrapper = styled.div`
     width: 150px;
     font-weight: 500;
 
-    &:hover{
+    &:hover {
       background: red;
     }
 
@@ -110,18 +109,18 @@ const FormTextWrapper = styled.div`
 
 const SubscriptionImageWrapper = styled.div`
   width: 200px;
-  margin-top: -50px; 
+  margin-top: -50px;
   border: 10px solid white;
   flex-shrink: 0;
   border-radius: 50%;
 
   @media (max-width: 800px) {
-    margin-top: 0; 
+    margin-top: 0;
   }
 `;
 
 const SocialIcons = styled.div`
-  padding: 20px; 
+  padding: 20px;
   margin-bottom: 5rem;
   display: flex;
   flex-wrap: wrap;
@@ -144,46 +143,64 @@ const SubscriptionWidget = () => {
     fetch('/api/subscribers', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ email, name })
+      body: JSON.stringify({ email, name }),
     })
-    .then(async response => {
-      if(response.status !== 200 && response.status !== 201) {
-        return toast.error("Valami rosszul sült el. Kérlek próbáld újra!");
-      }
+      .then(async (response) => {
+        if (response.status !== 200 && response.status !== 201) {
+          return toast.error('Valami rosszul sült el. Kérlek próbáld újra!');
+        }
 
-      toast.success("🤟 Sikeres feliratkozás!");
-      // @ts-expect-error it should work
-      event.target.reset();
-    })
-    .catch(error => {
-      console.error(error);
-      toast.error("Valami rosszul sült el. Kérlek próbáld újra!");
-    })
-    .finally(() => setLoading(false));
-    }
+        toast.success('🤟 Sikeres feliratkozás!');
+        // @ts-expect-error it should work
+        event.target.reset();
+      })
+      .catch((error) => {
+        console.error(error);
+        toast.error('Valami rosszul sült el. Kérlek próbáld újra!');
+      })
+      .finally(() => setLoading(false));
+  };
 
-    return (
-      <FormWrapper >
-        <FormTextWrapper>
-          <SubscriptionImageWrapper>
-            <StaticImage src="../assets/images/ftm-hug.jpg" alt="Feed The Mogul logo" style={{ borderRadius: '50%', width: '100%' }} imgStyle={{ borderRadius: '50%' }} />
-          </SubscriptionImageWrapper>
-          <div className="text-holder">
-            <h2>Ne maradj le!</h2>
-            <p>
-              Sajnos a social media platformokon manapság már nagyon 
-              nehéz elérni az embereket. Inkább saját tábort építünk, és küldünk üzenetet,
-              ha lesz koncertünk, vagy elkészül egy új videóklip / album.
-            </p>
-          </div>
-        </FormTextWrapper>
-        <form onSubmit={handleSubmit}>
-          <input type='name' name='firstName' placeholder="Keresztneved" disabled={loading} />
-          <input type='email' name='email' required placeholder="E-mail címed" disabled={loading} />
-          <button type="submit" disabled={loading}>{loading ? 'Küldés...' : 'Feliratkozás'}</button> 
-        </form>
-      </FormWrapper>
-    );
-}
+  return (
+    <FormWrapper>
+      <FormTextWrapper>
+        <SubscriptionImageWrapper>
+          <StaticImage
+            src="../assets/images/ftm-hug.jpg"
+            alt="Feed The Mogul logo"
+            style={{ borderRadius: '50%', width: '100%' }}
+            imgStyle={{ borderRadius: '50%' }}
+          />
+        </SubscriptionImageWrapper>
+        <div className="text-holder">
+          <h2>Ne maradj le!</h2>
+          <p>
+            Sajnos a social media platformokon manapság már nagyon nehéz elérni
+            az embereket. Inkább saját tábort építünk, és küldünk üzenetet, ha
+            lesz koncertünk, vagy elkészül egy új videóklip / album.
+          </p>
+        </div>
+      </FormTextWrapper>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="name"
+          name="firstName"
+          placeholder="Keresztneved"
+          disabled={loading}
+        />
+        <input
+          type="email"
+          name="email"
+          required
+          placeholder="E-mail címed"
+          disabled={loading}
+        />
+        <button type="submit" disabled={loading}>
+          {loading ? 'Küldés...' : 'Feliratkozás'}
+        </button>
+      </form>
+    </FormWrapper>
+  );
+};
 
 export default SubscriptionWidget;

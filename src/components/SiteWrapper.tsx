@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 import GlobalStyles from '../styles/GlobalStyles';
 
 interface SiteWrapperProps {
-    children: ReactNode;
+  children: ReactNode;
 }
 
 export default function SiteWrapper({ children }: SiteWrapperProps) {
