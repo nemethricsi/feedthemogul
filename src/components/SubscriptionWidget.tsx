@@ -51,14 +51,14 @@ const FormWrapper = styled.div`
     border: none;
     padding: 8px 16px;
     border-radius: 8px;
-    color: var(--white, white);
-    background: var(--red);
+    color: #f4c1f1;
+    background: #2e2e2e;
     cursor: pointer;
     width: 150px;
     font-weight: 500;
 
     &:hover {
-      background: red;
+      background: #3f3f3f;
     }
 
     &:disabled {

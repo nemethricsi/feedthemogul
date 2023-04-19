@@ -28,8 +28,10 @@ const MainStyles = styled.main`
 const ImageWrapper = styled.div`
   justify-self: center;
   margin-bottom: 1rem;
-  width: 200px;
+  width: 180px;
+  height: 180px;
   border-radius: 50%;
+  line-height: 0;
 `;
 
 const Subtitle = styled.p`
@@ -64,10 +66,11 @@ const IconWrapper = styled.a`
   place-content: center;
   cursor: pointer;
   box-shadow: var(--icon-wrapper-box-shadow);
-  transition: transform 0.25s ease-in-out;
+  transition: all 0.25s ease-in-out;
 
   &:hover {
     box-shadow: var(--box-shadow-paper);
+    background: #f4c1f1;
   }
 
   @media (max-width: 800px) {
@@ -83,7 +86,7 @@ const IndexPage: React.FC<PageProps> = () => {
       <MainStyles>
         <ImageWrapper>
           <StaticImage
-            src="../assets/images/ftm-logo.jpeg"
+            src="../assets/images/ftm-logo-pink.jpg"
             alt="Feed The Mogul logo"
             style={{ borderRadius: '50%' }}
             imgStyle={{ borderRadius: '50%' }}
