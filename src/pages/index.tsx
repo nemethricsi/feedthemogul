@@ -88,8 +88,16 @@ const IndexPage: React.FC<PageProps> = () => {
           <StaticImage
             src="../assets/images/ftm-logo-pink.jpg"
             alt="Feed The Mogul logo"
-            style={{ borderRadius: '50%' }}
-            imgStyle={{ borderRadius: '50%' }}
+            style={{
+              borderRadius: '50%',
+              width: '100%',
+              height: '100%',
+            }}
+            imgStyle={{
+              borderRadius: '50%',
+              width: '100%',
+              height: '100%',
+            }}
           />
         </ImageWrapper>
         <Subtitle>Grunge-stoner-punk rock Budapestről</Subtitle>

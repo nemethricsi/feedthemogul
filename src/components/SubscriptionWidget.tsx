@@ -166,7 +166,7 @@ const SubscriptionWidget = () => {
       <FormTextWrapper>
         <SubscriptionImageWrapper>
           <StaticImage
-            src="../assets/images/ftm-hug.jpg"
+            src="../assets/images/ftm-hug-pink.jpg"
             alt="Feed The Mogul logo"
             style={{ borderRadius: '50%', width: '100%' }}
             imgStyle={{ borderRadius: '50%' }}
