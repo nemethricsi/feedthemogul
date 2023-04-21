@@ -138,14 +138,14 @@ const IndexPage: React.FC<PageProps> = () => {
             <SiYoutube size={30} />
           </IconWrapper>
           <IconWrapper
-            href="https://soundcloud.com/user-512421796"
+            href="https://soundcloud.com/feedthemogul"
             target="_blank"
             rel="noopener noreferrer"
           >
             <SlSocialSoundcloud size={30} />
           </IconWrapper>
           <IconWrapper
-            href="https://deezer.page.link/g7AwwPdB6P6QjfgdA"
+            href="https://www.deezer.com/en/artist/63211522"
             target="_blank"
             rel="noopener noreferrer"
           >
