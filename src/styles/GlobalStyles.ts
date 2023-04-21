@@ -1,7 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyles = createGlobalStyle`
-  /* 
+  /*
   https://www.joshwcomeau.com/css/custom-css-reset/
   */
   /*
@@ -11,7 +11,7 @@ const GlobalStyles = createGlobalStyle`
   *, *::before, *::after {
   box-sizing: border-box;
   }
-   
+
   /*
   2. Remove default margin
   */
@@ -82,6 +82,7 @@ const GlobalStyles = createGlobalStyle`
     --white: #fff;
     --black: #2e2e2e;
     --red: #D92A1C;
+    --mogul-pink: #f4c1f1;
     --blue-ink: #0039a6;
     --box-shadow-paper: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
       rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;

@@ -51,7 +51,7 @@ const FormWrapper = styled.div`
     border: none;
     padding: 8px 16px;
     border-radius: 8px;
-    color: #f4c1f1;
+    color: var(--mogul-pink);
     background: #2e2e2e;
     cursor: pointer;
     width: 150px;

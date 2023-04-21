@@ -13,6 +13,7 @@ const config: GatsbyConfig = {
   // If you use VSCode you can also use the GraphQL plugin
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
+  trailingSlash: 'ignore',
   plugins: [
     'gatsby-plugin-styled-components',
     `gatsby-plugin-image`,
@@ -47,6 +48,21 @@ const config: GatsbyConfig = {
         pluginConfig: {
           head: true,
         },
+      },
+    },
+    {
+      resolve: `gatsby-source-sanity`,
+      options: {
+        projectId: `awlvr4mc`,
+        dataset: `production`,
+        // a token with read permissions is required
+        // if you have a private dataset
+        // token: process.env.SANITY_TOKEN,
+
+        // If the Sanity GraphQL API was deployed using `--tag <name>`,
+        // use `graphqlTag` to specify the tag name. Defaults to `default`.
+        graphqlTag: 'default',
+        watchMode: process.env.NODE_ENV !== 'production',
       },
     },
   ],

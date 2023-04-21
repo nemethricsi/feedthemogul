@@ -70,7 +70,7 @@ const IconWrapper = styled.a`
 
   &:hover {
     box-shadow: var(--box-shadow-paper);
-    background: #f4c1f1;
+    background: var(--mogul-pink);
   }
 
   @media (max-width: 800px) {
@@ -79,7 +79,8 @@ const IconWrapper = styled.a`
   }
 `;
 
-const IndexPage: React.FC<PageProps> = () => {
+const IndexPage: React.FC<PageProps> = (props) => {
+  console.log({ props });
   return (
     <>
       <Seo title="Főoldal" />
