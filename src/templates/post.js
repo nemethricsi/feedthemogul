@@ -1,30 +1,11 @@
 import React from 'react';
 import styled from 'styled-components';
-import { graphql, Link } from 'gatsby';
+import { graphql } from 'gatsby';
 import { PortableText } from '@portabletext/react';
 import YouTube from 'react-youtube';
 import getYoutubeId from 'get-youtube-id';
 import SubscriptionWidget from '../components/SubscriptionWidget';
-// import urlBuilder from '@sanity/image-url';
-// import {
-//   FaFacebookSquare as FacebookIcon,
-//   FaInstagram,
-//   FaSpotify,
-//   FaYoutube,
-//   FaGlobe,
-//   FaExternalLinkAlt,
-// } from 'react-icons/fa';
-// import Img from 'gatsby-plugin-sanity-image';
-// import { ContainerStyles } from '../styles/ContainerStyles';
-// import { ContentStyles } from '../styles/ContentStyles';
 import Seo from '../components/Seo';
-
-// function urlFor(source) {
-//   return urlBuilder({
-//     projectId: 'q7xlgfk0',
-//     dataset: 'production',
-//   }).image(source);
-// }
 
 const Wrapper = styled.div`
   max-width: 800px;
@@ -99,9 +80,8 @@ export default function SinglePost({ data: { post } }) {
     },
   };
   const {
-    _id,
     title,
-    _rawBody: portableText,
+    _rawContent: portableText,
     author: { name: authorName },
   } = post;
 
@@ -126,7 +106,7 @@ export default function SinglePost({ data: { post } }) {
         {authorName}
       </p>
       <PortableTextStyles>
-        <PortableText content={portableText} components={components} />
+        <PortableText value={portableText} components={components} />
       </PortableTextStyles>
       <div style={{ marginTop: '6rem', marginBottom: '3rem' }}>
         <SubscriptionWidget />
