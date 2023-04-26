@@ -1,6 +1,5 @@
 import * as React from 'react';
 import type { PageProps } from 'gatsby';
-import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import Seo from '../components/Seo';
 import SubscriptionWidget from '../components/SubscriptionWidget';

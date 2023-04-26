@@ -1,3 +1,20 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+
+  html,
+  body,
+  #___gatsby,
+  #gatsby-focus-wrapper {
+    @apply h-full;
+  }
+
+  body {
+    @apply bg-slate-200;
+  }
+}

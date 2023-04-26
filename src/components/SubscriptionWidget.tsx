@@ -1,136 +1,7 @@
 import * as React from 'react';
 import type { FormEvent } from 'react';
-import styled from 'styled-components';
 import { StaticImage } from 'gatsby-plugin-image';
 import { toast } from 'react-toastify';
-
-const FormWrapper = styled.div`
-  background-color: white;
-  padding: 1rem;
-  border-radius: 8px;
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  form {
-    display: flex;
-    gap: 8px;
-    align-self: center;
-
-    @media (max-width: 800px) {
-      flex-direction: column;
-      width: 100%;
-      gap: 16px;
-    }
-  }
-
-  input {
-    padding: 8px 16px;
-    border-radius: 8px;
-    border: 1px solid gray;
-    background-color: #fffffa;
-    width: 250px;
-    font-size: 16px;
-
-    &::placeholder {
-      font-weight: 400;
-    }
-
-    &:disabled {
-      background-color: #f2f2f2;
-      color: #ccc;
-    }
-
-    @media (max-width: 800px) {
-      width: 100%;
-      padding: 10px 20px;
-    }
-  }
-
-  button[type='submit'] {
-    border: none;
-    padding: 8px 16px;
-    border-radius: 8px;
-    color: var(--mogul-pink);
-    background: #2e2e2e;
-    cursor: pointer;
-    width: 150px;
-    font-weight: 500;
-
-    &:hover {
-      background: #3f3f3f;
-    }
-
-    &:disabled {
-      background: lightgray;
-      color: #eee;
-    }
-
-    @media (max-width: 800px) {
-      width: 100%;
-      padding: 10px 20px;
-    }
-  }
-
-  @media (max-width: 800px) {
-    border-radius: 0;
-    padding: 2rem;
-  }
-`;
-
-const FormTextWrapper = styled.div`
-  display: flex;
-  gap: 1rem;
-  margin-bottom: 1rem;
-
-  .text-holder {
-    display: flex;
-    flex-direction: column;
-    max-width: 440px;
-
-    h2 {
-      font-size: 28px;
-    }
-
-    p {
-      color: darkgray;
-    }
-  }
-
-  @media (max-width: 800px) {
-    flex-direction: column;
-    align-items: center;
-
-    .text-holder {
-      text-align: center;
-    }
-  }
-`;
-
-const SubscriptionImageWrapper = styled.div`
-  width: 200px;
-  margin-top: -50px;
-  border: 10px solid white;
-  flex-shrink: 0;
-  border-radius: 50%;
-
-  @media (max-width: 800px) {
-    margin-top: 0;
-  }
-`;
-
-const SocialIcons = styled.div`
-  padding: 20px;
-  margin-bottom: 5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-
-  @media (max-width: 800px) {
-    margin-bottom: 2rem;
-  }
-`;
 
 const SubscriptionWidget = () => {
   const [loading, setLoading] = React.useState(false);
@@ -162,31 +33,35 @@ const SubscriptionWidget = () => {
   };
 
   return (
-    <FormWrapper>
-      <FormTextWrapper>
-        <SubscriptionImageWrapper>
+    <div className="flex flex-col gap-2 bg-white p-8 md:rounded-lg md:p-4">
+      <div className="mb-4 flex flex-col items-center gap-4 md:flex-row">
+        <div className="mt-0 w-48 flex-shrink-0 rounded-full border-8 border-white md:-mt-14">
           <StaticImage
             src="../assets/images/ftm-hug-pink.jpg"
             alt="Feed The Mogul logo"
             style={{ borderRadius: '50%', width: '100%' }}
             imgStyle={{ borderRadius: '50%' }}
           />
-        </SubscriptionImageWrapper>
-        <div className="text-holder">
-          <h2>Ne maradj le!</h2>
-          <p>
+        </div>
+        <div className="flex max-w-md flex-col text-center md:text-left">
+          <h2 className="text-3xl">Ne maradj le!</h2>
+          <p className="text-slate-400">
             Sajnos a social media platformokon manapság már nagyon nehéz elérni
             az embereket. Inkább saját tábort építünk, és küldünk üzenetet, ha
             lesz koncertünk, vagy elkészül egy új videóklip / album.
           </p>
         </div>
-      </FormTextWrapper>
-      <form onSubmit={handleSubmit}>
+      </div>
+      <form
+        onSubmit={handleSubmit}
+        className="flex w-full flex-col gap-4 self-center md:flex-row md:gap-2"
+      >
         <input
           type="name"
           name="firstName"
           placeholder="Keresztneved"
           disabled={loading}
+          className="w-full rounded-lg border-2 border-gray-200 bg-slate-50 px-5 py-3 font-semibold placeholder:font-normal placeholder:text-slate-400 disabled:bg-slate-100 disabled:text-slate-400 md:w-64 md:px-4 md:py-2"
         />
         <input
           type="email"
@@ -194,12 +69,17 @@ const SubscriptionWidget = () => {
           required
           placeholder="E-mail címed"
           disabled={loading}
+          className="w-full rounded-lg border-2 border-gray-200 bg-slate-50 px-5 py-3 font-semibold placeholder:font-normal placeholder:text-slate-400 disabled:bg-slate-100 disabled:text-slate-400 md:w-64 md:px-4 md:py-2"
         />
-        <button type="submit" disabled={loading}>
+        <button
+          type="submit"
+          disabled={loading}
+          className="w-full cursor-pointer rounded-lg border-none bg-slate-900 px-5 py-3 font-medium text-pink-200 transition-colors hover:bg-slate-700 disabled:bg-slate-100 disabled:text-slate-400 md:w-36 md:px-4 md:py-2"
+        >
           {loading ? 'Küldés...' : 'Feliratkozás'}
         </button>
       </form>
-    </FormWrapper>
+    </div>
   );
 };
 

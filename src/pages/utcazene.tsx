@@ -1,6 +1,5 @@
 import * as React from 'react';
 import type { HeadFC, PageProps } from 'gatsby';
-import styled from 'styled-components';
 import { SiYoutube } from 'react-icons/si';
 import {
   SlSocialFacebook,
@@ -9,139 +8,46 @@ import {
 } from 'react-icons/sl';
 import Seo from '../components/Seo';
 
-const MainStyles = styled.main`
-  min-height: 100%;
-  padding-top: 3rem;
-  padding-bottom: 3rem;
-
-  @media (max-width: 800px) {
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-`;
-
-const Letter = styled.div`
-  background-color: var(--white);
-  box-shadow: var(--box-shadow-paper);
-  padding: 30px;
-  border-radius: 4px;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-
-  @media (max-width: 800px) {
-    padding: 16px;
-  }
-`;
-
-const Links = styled.ul`
-  list-style-type: none;
-  padding: 0;
-  display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
-  justify-content: center;
-
-  li {
-    color: white;
-    background-color: var(--red);
-    border-radius: 8px;
-
-    &:hover {
-      background-color: red;
-    }
-  }
-
-  a {
-    color: inherit;
-    text-decoration: none;
-    background: none;
-    padding: 6px 12px;
-  }
-`;
-
-const IframeWrapper = styled.div`
-  position: relative;
-  padding-bottom: 56.25%; /* 16:9 */
-  height: 0;
-
-  & iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-  }
-`;
-
-const PressList = styled.ul`
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  list-style-type: none;
-
-  a {
-    background: none;
-  }
-
-  li::marker {
-    content: '🎸 ';
-  }
-`;
-
-const Greeting = styled.p`
-  font-size: 120%;
-  margin: 0;
-  margin-top: 1.5rem;
-`;
-
-const Signature = styled.p`
-  font-family: 'Reenie Beanie', cursive;
-  font-size: 60px;
-  margin: 0;
-  line-height: 0.4;
-  color: var(--blue-ink);
-`;
-
-const SocialWrapper = styled.div`
-  display: flex;
-  gap: 8px;
-`;
-
-const IconWrapper = styled.a`
-  background-color: var(--icon-color);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: grid;
-  place-content: center;
-  cursor: pointer;
-  box-shadow: var(--icon-wrapper-box-shadow);
-  transition: transform 0.25s ease-in-out;
-`;
-
 const UtcazenePage: React.FC<PageProps> = () => {
   return (
-    <MainStyles>
+    <main className="min-h-full md:py-12">
       <Seo title="Utcazene pályázat" />
-      <Letter>
-        <Links>
-          <li>
-            <a href="#acoustic-video">Látható és hallható</a>
+      <div className="m-auto flex max-w-3xl flex-col gap-5 rounded bg-white p-4 shadow-lg md:p-8">
+        <ul className="flex list-none flex-wrap justify-center gap-4">
+          <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
+            <a
+              href="#acoustic-video"
+              className="block h-full w-full bg-none px-4 py-2 text-inherit no-underline"
+            >
+              Látható és hallható
+            </a>
           </li>
-          <li>
-            <a href="#introduction">Bemutatkozás</a>
+          <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
+            <a
+              href="#introduction"
+              className="block h-full w-full bg-none px-4 py-2 text-inherit no-underline"
+            >
+              Bemutatkozás
+            </a>
           </li>
-          <li>
-            <a href="#references">Egyéb referenciák</a>
+          <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
+            <a
+              href="#references"
+              className="block h-full w-full bg-none px-4 py-2 text-inherit no-underline"
+            >
+              Egyéb referenciák
+            </a>
           </li>
-          <li>
-            <a href="#contact">Elérhetőségek</a>
+          <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
+            <a
+              href="#contact"
+              className="block h-full w-full bg-none px-4 py-2 text-inherit no-underline"
+            >
+              Elérhetőségek
+            </a>
           </li>
-        </Links>
-        <Greeting>Tisztelt Utcazene Szervezők!</Greeting>
+        </ul>
+        <p className="mt-6 text-xl">Tisztelt Utcazene Szervezők!</p>
         <p>
           <strong>Ipolyi-Gáts Hunor</strong> vagyok a{' '}
           <span>Feed the Mogulból</span>. Zenekarunk akusztik műsorra társult{' '}
@@ -155,15 +61,13 @@ const UtcazenePage: React.FC<PageProps> = () => {
           -vel, és ezúton szeretnénk jelentkezni a 2023-as Utcazene Fesztiválra.
         </p>
         <h2 id="acoustic-video">Akusztikus bemutatkozásunk (playlist):</h2>
-        <IframeWrapper>
-          <iframe
-            src="https://www.youtube.com/embed/videoseries?list=PLy-qNPoQEFCLC8xWf2TP_Smlr53PputhK"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
-        </IframeWrapper>
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLy-qNPoQEFCLC8xWf2TP_Smlr53PputhK"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="aspect-video"
+        />
         <p>
           Egy grunge-punk banda vagyunk Budapestről, akik energikus, mozgásra
           invitáló zenét játszanak általában. Több vetélkedőn értünk már el
@@ -189,38 +93,44 @@ const UtcazenePage: React.FC<PageProps> = () => {
           utcáin!
         </p>
         <p style={{ marginTop: '2rem' }}>Üdvözlettel,</p>
-        <Signature>Hunor</Signature>
+        <p className="font-mono font-reenie text-6xl leading-none text-blue-600">
+          Hunor
+        </p>
         <p>Feed the Mogul</p>
-        <SocialWrapper>
-          <IconWrapper
+        <div className="flex gap-6">
+          <a
             href="https://open.spotify.com/artist/0sIHN7AhJVinHJak74LClq?si=DzI9EyYQRpGEts1SuwugXg&dd=1"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-12 w-12 cursor-pointer place-content-center rounded-full bg-violet-100 shadow transition-shadow hover:shadow-md"
           >
             <SlSocialSpotify size={30} />
-          </IconWrapper>
-          <IconWrapper
+          </a>
+          <a
             href="https://www.instagram.com/feedthemogul"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-12 w-12 cursor-pointer place-content-center rounded-full bg-violet-100 shadow transition-shadow hover:shadow-md"
           >
             <SlSocialInstagram size={30} />
-          </IconWrapper>
-          <IconWrapper
+          </a>
+          <a
             href="https://www.facebook.com/feedthemogul"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-12 w-12 cursor-pointer place-content-center rounded-full bg-violet-100 shadow transition-shadow hover:shadow-md"
           >
             <SlSocialFacebook size={30} />
-          </IconWrapper>
-          <IconWrapper
+          </a>
+          <a
             href="https://www.youtube.com/@FeedTheMogul"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-12 w-12 cursor-pointer place-content-center rounded-full bg-violet-100 shadow transition-shadow hover:shadow-md"
           >
             <SiYoutube size={30} />
-          </IconWrapper>
-        </SocialWrapper>
+          </a>
+        </div>
         <hr />
         <h2 id="introduction">Bemutatkozás</h2>
         <p>
@@ -236,7 +146,10 @@ const UtcazenePage: React.FC<PageProps> = () => {
           gyakorolnak a zenei színtéren, és izgalmas jövő előtt állnak.
         </p>
         <h2 id="references">Sajtómegjelenések:</h2>
-        <PressList>
+        <ul
+          role="list"
+          className="list-disc space-y-3 pl-5 text-slate-400 marker:text-sky-400"
+        >
           <li>
             <a
               href="https://f21.hu/zene/feed_the_mogul_interju"
@@ -279,21 +192,19 @@ const UtcazenePage: React.FC<PageProps> = () => {
               Itt az első Feed The Mogul EP, és már készül a második (Lángoló)
             </a>
           </li>
-        </PressList>
+        </ul>
         <p>Ui.: így szólunk nem akusztikus felállásban (playlist):</p>
         <p>
           Ezt az élőben feljátszott anyagot 2022-ben rögzítettük a Sounday
           Studióban Vastag "Vasti" Gáborral, jelenleg még nem publikus.
         </p>
-        <IframeWrapper>
-          <iframe
-            src="https://www.youtube.com/embed/videoseries?list=PLy-qNPoQEFCIbw2mXE9HXEqJoMoFUZ0JW"
-            title="YouTube video player"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowFullScreen
-          />
-        </IframeWrapper>
+        <iframe
+          src="https://www.youtube.com/embed/videoseries?list=PLy-qNPoQEFCIbw2mXE9HXEqJoMoFUZ0JW"
+          title="YouTube video player"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          allowFullScreen
+          className="aspect-video"
+        />
         <hr />
         <div>
           <h2 id="contact">Elérhetőségek</h2>
@@ -309,8 +220,8 @@ const UtcazenePage: React.FC<PageProps> = () => {
             <a href="tel:+36209369932">+36 20 936 9932</a>
           </p>
         </div>
-      </Letter>
-    </MainStyles>
+      </div>
+    </main>
   );
 };
 
