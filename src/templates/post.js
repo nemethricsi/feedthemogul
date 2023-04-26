@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql, Link } from 'gatsby';
-import PortableText from '@sanity/block-content-to-react';
+import { PortableText } from '@portabletext/react';
 import YouTube from 'react-youtube';
 import getYoutubeId from 'get-youtube-id';
 import SubscriptionWidget from '../components/SubscriptionWidget';
@@ -66,7 +66,7 @@ const ExternalLink = styled.a`
 `;
 
 export default function SinglePost({ data: { post } }) {
-  const serializers = {
+  const components = {
     marks: {
       link: ({ children, mark }) => {
         return (
@@ -126,7 +126,7 @@ export default function SinglePost({ data: { post } }) {
         {authorName}
       </p>
       <PortableTextStyles>
-        <PortableText blocks={portableText} serializers={serializers} />
+        <PortableText content={portableText} components={components} />
       </PortableTextStyles>
       <div style={{ marginTop: '6rem', marginBottom: '3rem' }}>
         <SubscriptionWidget />
@@ -143,7 +143,7 @@ export const query = graphql`
       author {
         name
       }
-      _rawBody(resolveReferences: { maxDepth: 4 })
+      _rawContent(resolveReferences: { maxDepth: 4 })
     }
   }
 `;

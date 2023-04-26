@@ -16,7 +16,7 @@
   },
   "dependencies": {
     "@mailerlite/mailerlite-nodejs": "^1.0.1",
-    "@sanity/block-content-to-react": "^3.0.0",
+    "@portabletext/react": "^2.0.3",
     "babel-plugin-styled-components": "^2.1.1",
     "dotenv": "^16.0.3",
     "gatsby": "^5.8.1",
