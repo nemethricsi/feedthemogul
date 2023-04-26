@@ -7,9 +7,6 @@ module.exports = {
   ],
   theme: {
     extend: {},
-    fontFamily: {
-      reenie: ['Reenie Beanie'],
-    },
   },
   plugins: [],
 };

@@ -31,7 +31,7 @@ const config: GatsbyConfig = {
         web: [
           {
             name: `Open Sans`,
-            file: `https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Rubik:wght@300;400;500;700&display=swap`,
+            file: `https://fonts.googleapis.com/css2?family=Reenie+Beanie&family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap`,
           },
         ],
       },

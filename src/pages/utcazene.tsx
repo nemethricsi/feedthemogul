@@ -17,7 +17,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#acoustic-video"
-              className="block h-full w-full bg-none px-4 py-2 text-inherit no-underline"
+              className="block h-full w-full bg-none px-4 py-2 text-sm text-inherit no-underline"
             >
               Látható és hallható
             </a>
@@ -25,7 +25,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#introduction"
-              className="block h-full w-full bg-none px-4 py-2 text-inherit no-underline"
+              className="block h-full w-full bg-none px-4 py-2 text-sm text-inherit no-underline"
             >
               Bemutatkozás
             </a>
@@ -33,7 +33,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#references"
-              className="block h-full w-full bg-none px-4 py-2 text-inherit no-underline"
+              className="block h-full w-full bg-none px-4 py-2 text-sm text-inherit no-underline"
             >
               Egyéb referenciák
             </a>
@@ -41,7 +41,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#contact"
-              className="block h-full w-full bg-none px-4 py-2 text-inherit no-underline"
+              className="block h-full w-full bg-none px-4 py-2 text-sm text-inherit no-underline"
             >
               Elérhetőségek
             </a>
@@ -95,7 +95,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           utcáin!
         </p>
         <p style={{ marginTop: '2rem' }}>Üdvözlettel,</p>
-        <p className="font-mono font-reenie text-6xl leading-none text-blue-600">
+        <p className="font-['Reenie_Beanie'] text-6xl leading-none text-blue-600">
           Hunor
         </p>
         <p>Feed the Mogul</p>
