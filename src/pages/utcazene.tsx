@@ -13,7 +13,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
     <main className="min-h-full md:py-12">
       <Seo title="Utcazene pályázat" />
       <div className="m-auto flex max-w-3xl flex-col gap-5 rounded bg-white p-4 shadow-lg md:p-8">
-        <ul className="flex list-none flex-wrap justify-center gap-4">
+        <ul className="flex list-none flex-wrap justify-center gap-4 md:justify-between">
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#acoustic-video"
@@ -212,7 +212,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           className="aspect-video"
         />
         <hr />
-        <div>
+        <div className="flex flex-col gap-2">
           <h2 id="contact" className="text-xl font-extrabold">
             Elérhetőségek
           </h2>
