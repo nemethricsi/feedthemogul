@@ -1,6 +1,6 @@
 import React from 'react';
 import type { ReactNode } from 'react';
-import GlobalStyles from '../styles/GlobalStyles';
+// import GlobalStyles from '../styles/GlobalStyles';
 
 interface SiteWrapperProps {
   children: ReactNode;
@@ -9,7 +9,7 @@ interface SiteWrapperProps {
 export default function SiteWrapper({ children }: SiteWrapperProps) {
   return (
     <>
-      <GlobalStyles />
+      {/* <GlobalStyles /> */}
       {children}
     </>
   );
