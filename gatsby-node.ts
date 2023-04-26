@@ -1,7 +1,7 @@
 const path = require('path');
 
-module.exports.createPages = async ({ graphql, actions }) => {
-  const { createPage, createRedirect } = actions;
+module.exports.createPages = async ({ graphql, actions }: any) => {
+  const { createPage } = actions;
   const postTemplate = path.resolve(`./src/templates/post.js`);
 
   const res = await graphql(`
@@ -20,7 +20,7 @@ module.exports.createPages = async ({ graphql, actions }) => {
 
   const posts = res.data.allSanityPost.edges;
 
-  posts.forEach((edge) => {
+  posts.forEach((edge: any) => {
     createPage({
       component: postTemplate,
       path: `/post/${edge.node.slug.current}`,
