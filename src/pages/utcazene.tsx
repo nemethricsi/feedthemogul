@@ -60,7 +60,9 @@ const UtcazenePage: React.FC<PageProps> = () => {
           </a>
           -vel, és ezúton szeretnénk jelentkezni a 2023-as Utcazene Fesztiválra.
         </p>
-        <h2 id="acoustic-video">Akusztikus bemutatkozásunk (playlist):</h2>
+        <h2 id="acoustic-video" className="text-xl font-extrabold">
+          Akusztikus bemutatkozásunk (playlist):
+        </h2>
         <iframe
           src="https://www.youtube.com/embed/videoseries?list=PLy-qNPoQEFCLC8xWf2TP_Smlr53PputhK"
           title="YouTube video player"
@@ -132,7 +134,9 @@ const UtcazenePage: React.FC<PageProps> = () => {
           </a>
         </div>
         <hr />
-        <h2 id="introduction">Bemutatkozás</h2>
+        <h2 id="introduction" className="text-xl font-extrabold">
+          Bemutatkozás
+        </h2>
         <p>
           A Feed The Mogul egy fiatal rockzenekar Budapestről. Az energikus és
           húzós tempójú zenéjük mélyen behatol az ember lelkébe, ám képesek
@@ -145,7 +149,9 @@ const UtcazenePage: React.FC<PageProps> = () => {
           tehetséges és ígéretes zenekar, akik már most óriási hatást
           gyakorolnak a zenei színtéren, és izgalmas jövő előtt állnak.
         </p>
-        <h2 id="references">Sajtómegjelenések:</h2>
+        <h2 id="references" className="text-xl font-extrabold">
+          Sajtómegjelenések:
+        </h2>
         <ul
           role="list"
           className="list-disc space-y-3 pl-5 text-slate-400 marker:text-sky-400"
@@ -207,7 +213,9 @@ const UtcazenePage: React.FC<PageProps> = () => {
         />
         <hr />
         <div>
-          <h2 id="contact">Elérhetőségek</h2>
+          <h2 id="contact" className="text-xl font-extrabold">
+            Elérhetőségek
+          </h2>
           <p>
             <strong>Email:</strong>{' '}
             <a href="mailto:hello@feedthemogul.com">hello@feedthemogul.com</a>
