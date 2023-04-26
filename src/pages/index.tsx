@@ -12,80 +12,12 @@ import {
   SlSocialSoundcloud,
 } from 'react-icons/sl';
 
-const MainStyles = styled.main`
-  min-height: 100%;
-  display: grid;
-  place-content: center;
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-
-  @media (max-width: 800px) {
-    padding-top: 2.5rem;
-    padding-bottom: 0;
-  }
-`;
-
-const ImageWrapper = styled.div`
-  justify-self: center;
-  margin-bottom: 1rem;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  line-height: 0;
-`;
-
-const Subtitle = styled.p`
-  text-align: center;
-  font-weight: 400;
-  font-size: 20px;
-
-  @media (max-width: 800px) {
-    font-size: 16px;
-  }
-`;
-
-const SocialIcons = styled.div`
-  padding: 20px;
-  margin-bottom: 5rem;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 1.5rem;
-
-  @media (max-width: 800px) {
-    margin-bottom: 2rem;
-  }
-`;
-
-const IconWrapper = styled.a`
-  background: white;
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: grid;
-  place-content: center;
-  cursor: pointer;
-  box-shadow: var(--icon-wrapper-box-shadow);
-  transition: all 0.25s ease-in-out;
-
-  &:hover {
-    box-shadow: var(--box-shadow-paper);
-    background: var(--mogul-pink);
-  }
-
-  @media (max-width: 800px) {
-    width: 60px;
-    height: 60px;
-  }
-`;
-
 const IndexPage: React.FC<PageProps> = (props) => {
-  console.log({ props });
   return (
     <>
       <Seo title="Főoldal" />
-      <MainStyles>
-        <ImageWrapper>
+      <main className="grid min-h-full place-content-center pt-10 md:py-10">
+        <div className="mb-4 h-44 w-44 justify-self-center rounded-full leading-none">
           <StaticImage
             src="../assets/images/ftm-logo-pink.jpg"
             alt="Feed The Mogul logo"
@@ -100,61 +32,70 @@ const IndexPage: React.FC<PageProps> = (props) => {
               height: '100%',
             }}
           />
-        </ImageWrapper>
-        <Subtitle>Grunge-stoner-punk rock Budapestről</Subtitle>
-        <SocialIcons>
-          <IconWrapper
+        </div>
+        <p className="text-center text-base md:text-xl">
+          Grunge-stoner-punk rock Budapestről
+        </p>
+        <div className="mb-8 flex flex-wrap justify-center gap-6 p-5 md:mb-20">
+          <a
             href="https://feedthemogul.bandcamp.com"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SiBandcamp size={30} />
-          </IconWrapper>
-          <IconWrapper
+          </a>
+          <a
             href="https://open.spotify.com/artist/0sIHN7AhJVinHJak74LClq?si=DzI9EyYQRpGEts1SuwugXg&dd=1"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SlSocialSpotify size={30} />
-          </IconWrapper>
-          <IconWrapper
+          </a>
+          <a
             href="https://www.instagram.com/feedthemogul"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SlSocialInstagram size={30} />
-          </IconWrapper>
-          <IconWrapper
+          </a>
+          <a
             href="https://www.facebook.com/feedthemogul"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SlSocialFacebook size={30} />
-          </IconWrapper>
-          <IconWrapper
+          </a>
+          <a
             href="https://www.youtube.com/@FeedTheMogul?sub_confirmation=1"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SiYoutube size={30} />
-          </IconWrapper>
-          <IconWrapper
+          </a>
+          <a
             href="https://soundcloud.com/feedthemogul"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SlSocialSoundcloud size={30} />
-          </IconWrapper>
-          <IconWrapper
+          </a>
+          <a
             href="https://www.deezer.com/en/artist/63211522"
             target="_blank"
             rel="noopener noreferrer"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SiDeezer size={30} />
-          </IconWrapper>
-        </SocialIcons>
+          </a>
+        </div>
         <SubscriptionWidget />
-      </MainStyles>
+      </main>
     </>
   );
 };
