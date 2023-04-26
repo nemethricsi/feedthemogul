@@ -49,14 +49,10 @@ const ExternalLink = styled.a`
 export default function SinglePost({ data: { post } }) {
   const components = {
     marks: {
-      link: ({ children, mark }) => {
+      link: ({ children, value: { href } }) => {
         return (
           <>
-            <ExternalLink
-              href={mark.href}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <ExternalLink href={href} target="_blank" rel="noopener noreferrer">
               {children}
             </ExternalLink>
           </>
