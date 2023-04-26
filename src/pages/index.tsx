@@ -40,7 +40,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
             href="https://feedthemogul.bandcamp.com"
             target="_blank"
             rel="noopener noreferrer"
-            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white text-inherit shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SiBandcamp size={30} />
           </a>
@@ -48,7 +48,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
             href="https://open.spotify.com/artist/0sIHN7AhJVinHJak74LClq?si=DzI9EyYQRpGEts1SuwugXg&dd=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white text-inherit shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SlSocialSpotify size={30} />
           </a>
@@ -56,7 +56,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
             href="https://www.instagram.com/feedthemogul"
             target="_blank"
             rel="noopener noreferrer"
-            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white text-inherit shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SlSocialInstagram size={30} />
           </a>
@@ -64,7 +64,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
             href="https://www.facebook.com/feedthemogul"
             target="_blank"
             rel="noopener noreferrer"
-            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white text-inherit shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SlSocialFacebook size={30} />
           </a>
@@ -72,7 +72,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
             href="https://www.youtube.com/@FeedTheMogul?sub_confirmation=1"
             target="_blank"
             rel="noopener noreferrer"
-            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white text-inherit shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SiYoutube size={30} />
           </a>
@@ -80,7 +80,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
             href="https://soundcloud.com/feedthemogul"
             target="_blank"
             rel="noopener noreferrer"
-            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white text-inherit shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SlSocialSoundcloud size={30} />
           </a>
@@ -88,7 +88,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
             href="https://www.deezer.com/en/artist/63211522"
             target="_blank"
             rel="noopener noreferrer"
-            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
+            className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white text-inherit shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
           >
             <SiDeezer size={30} />
           </a>
