@@ -6,6 +6,12 @@ import {
   SlSocialInstagram,
   SlSocialSpotify,
 } from 'react-icons/sl';
+import {
+  ChatBubbleLeftRightIcon,
+  MusicalNoteIcon,
+  NewspaperIcon,
+  PencilSquareIcon,
+} from '@heroicons/react/24/solid';
 import Seo from '../components/Seo';
 
 const UtcazenePage: React.FC<PageProps> = () => {
@@ -13,41 +19,45 @@ const UtcazenePage: React.FC<PageProps> = () => {
     <main className="min-h-full md:py-12">
       <Seo title="Utcazene pályázat" />
       <div className="m-auto flex max-w-3xl flex-col gap-5 rounded bg-white p-4 shadow-lg md:p-8">
-        <ul className="flex list-none flex-wrap justify-center gap-4 md:justify-between">
+        <ul className="flex list-none flex-col flex-wrap justify-center gap-2 md:flex-row md:justify-between">
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#acoustic-video"
-              className="block h-full w-full bg-none px-4 py-2 text-sm text-inherit no-underline"
+              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline md:py-2"
             >
-              Látható és hallható
+              <span>Látható és hallható</span>
+              <MusicalNoteIcon className="h-4 w-4 text-white" />
             </a>
           </li>
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#introduction"
-              className="block h-full w-full bg-none px-4 py-2 text-sm text-inherit no-underline"
+              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline md:py-2"
             >
-              Bemutatkozás
+              <span>Bio</span>
+              <NewspaperIcon className="h-4 w-4 text-white" />
             </a>
           </li>
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#references"
-              className="block h-full w-full bg-none px-4 py-2 text-sm text-inherit no-underline"
+              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline md:py-2"
             >
-              Egyéb referenciák
+              <span>Egyéb referenciák</span>
+              <PencilSquareIcon className="h-4 w-4 text-white" />
             </a>
           </li>
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#contact"
-              className="block h-full w-full bg-none px-4 py-2 text-sm text-inherit no-underline"
+              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline md:py-2"
             >
-              Elérhetőségek
+              <span>Elérhetőségek</span>
+              <ChatBubbleLeftRightIcon className="h-4 w-4 text-white" />
             </a>
           </li>
         </ul>
-        <p className="mt-6 text-xl">Tisztelt Utcazene Szervezők!</p>
+        <p className="text-xl md:mt-6">Tisztelt Utcazene Szervezők!</p>
         <p>
           <strong>Ipolyi-Gáts Hunor</strong> vagyok a{' '}
           <span>Feed the Mogulból</span>. Zenekarunk akusztik műsorra társult{' '}
