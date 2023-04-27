@@ -44,7 +44,7 @@ const SubscriptionWidget = () => {
           />
         </div>
         <div className="flex max-w-md flex-col text-center md:text-left">
-          <h2 className="text-3xl">Ne maradj le!</h2>
+          <h2 className="text-3xl font-extrabold">Ne maradj le!</h2>
           <p className="text-slate-400">
             Sajnos a social media platformokon manapság már nagyon nehéz elérni
             az embereket. Inkább saját tábort építünk, és küldünk üzenetet, ha

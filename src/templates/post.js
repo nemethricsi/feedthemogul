@@ -2,76 +2,30 @@ import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import { PortableText } from '@portabletext/react';
-import YouTube from 'react-youtube';
 import getYoutubeId from 'get-youtube-id';
+import LiteYouTubeEmbed from 'react-lite-youtube-embed';
+import YouTube from 'react-youtube';
 import SubscriptionWidget from '../components/SubscriptionWidget';
 import Seo from '../components/Seo';
-
-const Wrapper = styled.div`
-  max-width: 800px;
-  margin: 4rem auto;
-  padding: 1rem;
-
-  @media (max-width: 800px) {
-    margin: 1rem auto;
-  }
-`;
-
-const Headline = styled.h1`
-  font-weight: 700;
-  line-height: 1.2;
-  margin-bottom: 0.5rem;
-
-  @media (max-width: 800px) {
-    font-size: 28px;
-  }
-`;
-
-const PortableTextStyles = styled.div`
-  line-height: 1.5;
-  margin: 2rem 0;
-
-  p {
-    font-size: 20px;
-  }
-`;
-
-const ExternalLink = styled.a`
-  color: hsl(var(--color-red));
-
-  @media (hover: hover) and (pointer: fine) {
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-`;
 
 export default function SinglePost({ data: { post } }) {
   const components = {
     marks: {
       link: ({ children, value: { href } }) => {
         return (
-          <>
-            <ExternalLink href={href} target="_blank" rel="noopener noreferrer">
-              {children}
-            </ExternalLink>
-          </>
+          <a href={href} target="_blank" rel="noopener noreferrer">
+            {children}
+          </a>
         );
       },
     },
     types: {
-      youtubeVideo: (props) => {
-        const id = getYoutubeId(props.node.url);
-        if (!id) return '';
-        const opts = {
-          // height: '450',
-          width: '100%',
-        };
-        return (
-          <div style={{ marginTop: 16, marginBottom: 16 }}>
-            <YouTube videoId={id} opts={opts} />
-          </div>
-        );
+      embedYoutube: ({ value }) => {
+        const id = getYoutubeId(value.url);
+
+        if (!id) return null;
+
+        return <YouTube iframeClassName="w-full aspect-video" videoId={id} />;
       },
     },
   };
@@ -79,35 +33,26 @@ export default function SinglePost({ data: { post } }) {
     title,
     _rawContent: portableText,
     author: { name: authorName },
+    publishedDate,
   } = post;
 
   return (
-    <Wrapper>
-      <Seo
-        title={title}
-        // image={props.data.post.featuredImage.image.asset.url}
-      />
-      <Headline>{title}</Headline>
-      <p
-        style={{
-          backgroundColor: '#2e2e2e',
-          color: 'var(--mogul-pink)',
-          display: 'inline-block',
-          padding: '2px 4px',
-          borderRadius: '4px',
-          fontWeight: '700',
-          fontSize: 14,
-        }}
-      >
-        {authorName}
-      </p>
-      <PortableTextStyles>
+    <div className="min-h-full bg-white py-4 md:bg-zinc-200 md:py-16">
+      <div className="m-auto flex max-w-3xl flex-col gap-4 bg-white p-4 md:rounded md:p-10 md:shadow">
+        <Seo
+          title={title}
+          // image={props.data.post.featuredImage.image.asset.url}
+        />
+        <h1 className="text-2xl font-bold md:text-4xl">{title}</h1>
+        <p className="mb-6 self-start rounded bg-slate-800 px-2 py-1 text-sm font-medium text-pink-200">
+          {authorName}
+        </p>
         <PortableText value={portableText} components={components} />
-      </PortableTextStyles>
-      <div style={{ marginTop: '6rem', marginBottom: '3rem' }}>
-        <SubscriptionWidget />
+        <div className="mb-11 mt-2  md:mt-24">
+          <SubscriptionWidget />
+        </div>
       </div>
-    </Wrapper>
+    </div>
   );
 }
 
@@ -116,6 +61,7 @@ export const query = graphql`
     post: sanityPost(slug: { current: { eq: $slug } }) {
       _id
       title
+      publishedDate
       author {
         name
       }

@@ -19,6 +19,6 @@
   }
 
   a {
-    @apply font-semibold text-blue-400 underline underline-offset-2;
+    @apply font-semibold text-blue-400 underline underline-offset-2 hover:text-blue-600;
   }
 }
