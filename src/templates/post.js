@@ -1,12 +1,11 @@
 import React from 'react';
-import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import { PortableText } from '@portabletext/react';
 import getYoutubeId from 'get-youtube-id';
-import LiteYouTubeEmbed from 'react-lite-youtube-embed';
 import YouTube from 'react-youtube';
 import SubscriptionWidget from '../components/SubscriptionWidget';
 import Seo from '../components/Seo';
+import dayjs from 'dayjs';
 
 export default function SinglePost({ data: { post } }) {
   const components = {
@@ -44,8 +43,11 @@ export default function SinglePost({ data: { post } }) {
           // image={props.data.post.featuredImage.image.asset.url}
         />
         <h1 className="text-2xl font-bold md:text-4xl">{title}</h1>
-        <p className="mb-6 self-start rounded bg-slate-800 px-2 py-1 text-sm font-medium text-pink-200">
+        <p className="self-start rounded bg-slate-800 px-2 py-1 text-sm font-medium text-pink-200">
           {authorName}
+        </p>
+        <p className="mb-6 text-slate-400">
+          {dayjs(publishedDate).format('YYYY-MM-DD')}
         </p>
         <PortableText value={portableText} components={components} />
         <div className="mb-11 mt-2  md:mt-24">

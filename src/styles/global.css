@@ -16,6 +16,7 @@
 
   body {
     @apply bg-slate-200 font-['Poppins'] text-slate-800;
+    line-height: 1.625;
   }
 
   a {

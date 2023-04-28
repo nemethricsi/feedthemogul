@@ -66,6 +66,23 @@ const config: GatsbyConfig = {
         watchMode: process.env.NODE_ENV !== 'production',
       },
     },
+    {
+      resolve: 'gatsby-plugin-sanity-image',
+      options: {
+        projectId: 'awlvr4mc',
+        dataset: 'production',
+        altFieldName: 'alt',
+        warnOnMissingAlt: process.env.NODE_ENV === 'development',
+        // Additional params to pass to @sanity/image-url for every image. The
+        // default is shown here, so you can omit the directive if you are happy
+        // with what you see here.
+        defaultImageConfig: {
+          quality: 75,
+          fit: 'max',
+          auto: 'format',
+        },
+      },
+    },
   ],
 };
 
