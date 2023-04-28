@@ -3,6 +3,7 @@ import React from 'react';
 import SiteWrapper from './src/components/SiteWrapper';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.min.css';
+import '/node_modules/flag-icons/css/flag-icons.min.css';
 
 export function wrapPageElement({ element, props }) {
   return (

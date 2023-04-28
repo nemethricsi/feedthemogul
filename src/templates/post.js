@@ -46,7 +46,7 @@ export default function SinglePost({ data: { post } }) {
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex w-fit flex-col self-center rounded bg-slate-100 p-5 text-inherit text-slate-600 no-underline shadow-md hover:text-inherit hover:text-slate-800 hover:shadow-lg md:max-w-xl md:flex-row md:gap-5 md:p-4"
+            className="flex w-fit flex-col self-center rounded bg-slate-200 p-5 text-inherit text-slate-600 no-underline shadow-sm hover:text-inherit hover:text-slate-800 hover:shadow-lg md:max-w-xl md:flex-row md:gap-5 md:p-4 md:shadow-md"
           >
             <Image
               {...eventImage}
@@ -89,22 +89,25 @@ export default function SinglePost({ data: { post } }) {
 
   return (
     <div className="min-h-full bg-white py-4 md:bg-zinc-200 md:py-16">
-      <div className="m-auto flex max-w-3xl flex-col gap-4 bg-white p-4 md:rounded md:p-10 md:shadow">
-        <Seo
-          title={title}
-          // image={props.data.post.featuredImage.image.asset.url}
-        />
-        <h1 className="text-2xl font-bold md:text-4xl">{title}</h1>
-        <p className="self-start rounded bg-slate-800 px-2 py-1 text-sm font-medium text-pink-200">
-          {authorName}
-        </p>
-        <p className="mb-6 text-slate-400">
-          {dayjs(publishedDate).format('YYYY-MM-DD')}
-        </p>
-        <PortableText value={portableText} components={components} />
-        <hr className="mt-5" />
-        <div className="mb-11 mt-2  md:mt-24">
-          <SubscriptionWidget />
+      <div className="m-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-12">
+        <div className="flex flex-col gap-4 bg-white p-4 md:col-span-8 md:rounded md:p-10 md:shadow">
+          <Seo
+            title={title}
+            // image={props.data.post.featuredImage.image.asset.url}
+          />
+          <h1 className="text-2xl font-bold md:text-4xl">{title}</h1>
+          <p className="self-start rounded bg-slate-800 px-2 py-1 text-sm font-medium text-pink-200">
+            {authorName}
+          </p>
+          <p className="mb-6 text-slate-400">
+            {dayjs(publishedDate).format('YYYY-MM-DD')}
+          </p>
+          <PortableText value={portableText} components={components} />
+        </div>
+        <div className="md:col-span-4">
+          <div className="sticky top-6 bg-white p-4 @container md:rounded md:shadow">
+            <SubscriptionWidget />
+          </div>
         </div>
       </div>
     </div>
