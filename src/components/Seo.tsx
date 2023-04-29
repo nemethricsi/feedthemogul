@@ -25,12 +25,25 @@ const Seo = ({ children, location, title, image }: SeoProps) => {
         name="description"
         content="Grunge stoner punk rock from Budapest"
       />
-      {/* Open Graph */}
-      {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image} />
-      <meta property="og:title" content={title} key="ogtitle" />
-      <meta property="og:site_name" content="Feed The Mogul" key="ogsitename" />
       <meta
+        name="keywords"
+        property="keywords"
+        content="grunge,stoner rock,punk,rock music,live concert"
+      ></meta>
+      {/* Open Graph */}
+      {location && (
+        <meta name="og:url" property="og:url" content={location.href} />
+      )}
+      <meta name="og:image" property="og:image" content={image} />
+      <meta name="og:title" property="og:title" content={title} key="ogtitle" />
+      <meta
+        name="og:site_name"
+        property="og:site_name"
+        content="Feed The Mogul"
+        key="ogsitename"
+      />
+      <meta
+        name="og:description"
         property="og:description"
         content="Grunge stoner punk rock from Budapest"
         key="ogdesc"
