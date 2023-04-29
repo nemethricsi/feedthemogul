@@ -10,7 +10,7 @@ import {
   FaFacebook,
   FaFilePdf,
 } from 'react-icons/fa';
-import { SiYoutube } from 'react-icons/si';
+import { SiYoutube, SiTidal } from 'react-icons/si';
 import { SlSocialInstagram, SlSocialSpotify } from 'react-icons/sl';
 
 const ElectronicPressKit = () => {
@@ -193,6 +193,14 @@ const ElectronicPressKit = () => {
             rel="noopener noreferrer"
           >
             <SiYoutube className="h-6 w-6 text-slate-500 md:h-7 md:w-7" />
+          </a>
+          <a
+            className="text-inherit no-underline"
+            href="https://tidal.com/browse/artist/3524638"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <SiTidal className="h-6 w-6 text-slate-500 md:h-7 md:w-7" />
           </a>
         </div>
       </div>

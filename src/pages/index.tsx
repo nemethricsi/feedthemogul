@@ -3,7 +3,7 @@ import type { PageProps } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
 import Seo from '../components/Seo';
 import SubscriptionWidget from '../components/SubscriptionWidget';
-import { SiBandcamp, SiYoutube, SiDeezer } from 'react-icons/si';
+import { SiBandcamp, SiYoutube, SiDeezer, SiTidal } from 'react-icons/si';
 import {
   SlSocialFacebook,
   SlSocialInstagram,
@@ -95,6 +95,14 @@ const IndexPage: React.FC<PageProps> = (props) => {
                 className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white text-inherit shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
               >
                 <SiDeezer size={30} />
+              </a>
+              <a
+                href="https://tidal.com/browse/artist/3524638"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="grid h-11 w-11 cursor-pointer place-content-center rounded-full bg-white text-inherit shadow-md transition-all hover:bg-pink-200 hover:shadow-xl md:h-12 md:w-12"
+              >
+                <SiTidal size={30} />
               </a>
             </div>
             <div className="m-auto max-w-2xl @container">
