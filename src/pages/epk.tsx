@@ -21,9 +21,9 @@ const ElectronicPressKit = () => {
         title="Electronic Press Kit"
         image="https://www.feedthemogul.com/static/a6c92f17af0c240174ecf8b9b5e73296/94b20/BIK00628.webp"
       />
-      <main className="epk-bg min-h-full">
+      <main className="epk-bg min-h-full md:text-lg">
         <div className="container m-auto flex min-h-full max-w-6xl flex-col gap-8 p-4 md:gap-12">
-          <h1 className="mt-6 text-center text-5xl font-bold md:mb-12 md:text-6xl">
+          <h1 className="mt-6 text-center text-4xl font-bold md:mb-12 md:text-6xl">
             <span className="bg-gradient-to-r from-slate-800 to-pink-500 bg-clip-text text-transparent">
               Feed The Mogul
             </span>
@@ -59,7 +59,11 @@ const ElectronicPressKit = () => {
             </h2>
             <div className="mb-8 grid grid-cols-1 gap-4 md:mb-2 md:grid-cols-12">
               <div className="flex flex-col gap-4 md:col-span-6">
-                <h3 className="text-xl font-medium">Live Sessions</h3>
+                <h3 className="text-xl font-semibold uppercase">
+                  <span className="bg-gradient-to-r from-slate-800 to-pink-500 bg-clip-text text-transparent">
+                    Live Sessions
+                  </span>
+                </h3>
                 <p>
                   Recorded in 2022 at Sounday Studio in Budapest, this 6-piece
                   live session features one song in Hungarian and the rest in
@@ -76,7 +80,11 @@ const ElectronicPressKit = () => {
             </div>
             <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
               <div className="flex flex-col gap-4 md:col-span-6">
-                <h3 className="text-xl font-medium">Official Music Videos</h3>
+                <h3 className="text-xl font-semibold uppercase">
+                  <span className="bg-gradient-to-r from-slate-800 to-pink-500 bg-clip-text text-transparent">
+                    Official Music Videos
+                  </span>
+                </h3>
                 <p>
                   All these videos were created along with young Hungarian
                   creative creators.
@@ -170,14 +178,14 @@ const ElectronicPressKit = () => {
               </li>
             </ul>
           </section>
-          <div className="flex justify-evenly p-4 pb-8">
+          <div className="flex flex-wrap justify-center gap-12 p-4 pb-8">
             <a
               className="text-inherit no-underline"
               href="https://www.instagram.com/feedthemogul"
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SlSocialInstagram className="h-6 w-6 text-slate-500 md:h-7 md:w-7" />
+              <SlSocialInstagram className="h-6 w-6 text-slate-500 hover:text-slate-700 md:h-7 md:w-7" />
             </a>
             <a
               className="text-inherit no-underline"
@@ -185,7 +193,7 @@ const ElectronicPressKit = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <FaFacebook className="h-6 w-6 text-slate-500 md:h-7 md:w-7" />
+              <FaFacebook className="h-6 w-6 text-slate-500 hover:text-slate-700 md:h-7 md:w-7" />
             </a>
             <a
               className="text-inherit no-underline"
@@ -193,7 +201,7 @@ const ElectronicPressKit = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SlSocialSpotify className="h-6 w-6 text-slate-500 md:h-7 md:w-7" />
+              <SlSocialSpotify className="h-6 w-6 text-slate-500 hover:text-slate-700 md:h-7 md:w-7" />
             </a>
             <a
               className="text-inherit no-underline"
@@ -201,7 +209,7 @@ const ElectronicPressKit = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SiYoutube className="h-6 w-6 text-slate-500 md:h-7 md:w-7" />
+              <SiYoutube className="h-6 w-6 text-slate-500 hover:text-slate-700 md:h-7 md:w-7" />
             </a>
             <a
               className="text-inherit no-underline"
@@ -209,7 +217,7 @@ const ElectronicPressKit = () => {
               target="_blank"
               rel="noopener noreferrer"
             >
-              <SiTidal className="h-6 w-6 text-slate-500 md:h-7 md:w-7" />
+              <SiTidal className="h-6 w-6 text-slate-500 hover:text-slate-700 md:h-7 md:w-7" />
             </a>
           </div>
         </div>
