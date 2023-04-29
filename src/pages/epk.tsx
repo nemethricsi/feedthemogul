@@ -23,9 +23,11 @@ const ElectronicPressKit = () => {
           </span>
         </h1>
         <section className="flex flex-col gap-4 border-b-2 border-slate-300 pb-8">
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-12 md:gap-8">
             <div className="flex flex-col gap-4 md:col-span-5 md:gap-8">
-              <h2 className="text-2xl font-semibold md:text-3xl">Short bio</h2>
+              <h2 className="text-2xl font-semibold md:text-3xl md:uppercase">
+                Short bio
+              </h2>
               <p className="text-slate-800">
                 Feed The Mogul is a Hungarian grunge stoner punk rock band
                 hailing from Budapest. Formed in 2019, the idea for the band
@@ -37,32 +39,17 @@ const ElectronicPressKit = () => {
                 with a sound that is much better experienced in a live setting.
               </p>
             </div>
-            <div className="flex flex-col gap-4 md:col-span-7">
-              <StaticImage
-                src="../assets/images/BIK00628.jpg"
-                alt="Feed The Mogul band performing live"
-                className="rounded"
-              />
-              <StaticImage
-                src="../assets/images/BIK02598_web.jpg"
-                alt="Feed The Mogul band"
-                className="rounded md:hidden"
-              />
-              <a
-                href="https://drive.google.com/drive/folders/1pFVzsp3ree9uAdT50kTPxTaxdhj_AT9d?usp=sharing"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded border border-slate-300 bg-slate-50 px-4 py-3 no-underline opacity-80 md:px-6 md:py-4 md:shadow"
-              >
-                <FaGoogleDrive className="h-8 w-8" />
-                <span>See more photos on Google Drive (EPK)</span>
-                <FaExternalLinkAlt className="ml-auto h-4 w-4" />
-              </a>
-            </div>
+            <StaticImage
+              src="../assets/images/BIK00628.jpg"
+              alt="Feed The Mogul band performing live"
+              className="rounded  md:col-span-7"
+            />
           </div>
         </section>
         <section className="flex flex-col gap-4 border-b-2 border-slate-300 pb-8 md:gap-12">
-          <h2 className="text-2xl font-semibold md:text-3xl">Video</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl md:uppercase">
+            Video
+          </h2>
           <div className="grid grid-cols-1 gap-4 md:grid-cols-12">
             <div className="flex flex-col gap-4 md:col-span-6">
               <h3 className="text-xl font-medium">Live Sessions</h3>
@@ -108,7 +95,41 @@ const ElectronicPressKit = () => {
           </a>
         </section>
         <section className="flex flex-col gap-4 border-b-2 border-slate-300 pb-8">
-          <h2 className="my-3 text-2xl font-semibold md:text-3xl">Reach us</h2>
+          <h2 className="my-3 text-2xl font-semibold md:text-3xl md:uppercase">
+            Press Photos
+          </h2>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+            <StaticImage
+              src="../assets/images/BIK02598_web.jpg"
+              alt="Feed The Mogul band"
+              className="rounded"
+            />
+            <StaticImage
+              src="../assets/images/DSC06196.jpg"
+              alt="Feed The Mogul band 2"
+              className="rounded"
+            />
+            <StaticImage
+              src="../assets/images/BIK02528_web.jpg"
+              alt="Feed The Mogul band 2"
+              className="rounded"
+            />
+          </div>
+          <a
+            href="https://drive.google.com/drive/folders/1pFVzsp3ree9uAdT50kTPxTaxdhj_AT9d?usp=sharing"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-4 rounded border border-slate-300 bg-slate-50 px-4 py-3 no-underline opacity-80 md:self-center md:px-6 md:py-4 md:shadow"
+          >
+            <FaGoogleDrive className="h-8 w-8" />
+            <span>See more photos on Google Drive (EPK)</span>
+            <FaExternalLinkAlt className="ml-auto h-4 w-4" />
+          </a>
+        </section>
+        <section className="flex flex-col gap-4 border-b-2 border-slate-300 pb-8">
+          <h2 className="my-3 text-2xl font-semibold md:text-3xl md:uppercase">
+            Reach us
+          </h2>
           <ul className="flex flex-col gap-4">
             <li className="flex items-center gap-2">
               <FaEnvelope className="h-5 w-5 text-slate-500" />
