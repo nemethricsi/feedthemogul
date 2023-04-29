@@ -18,6 +18,7 @@ export default function SinglePost({ data: { post } }) {
     _rawContent: portableText,
     author: { name: authorName },
     publishedDate,
+    featuredImage,
   } = post;
 
   const components = {
@@ -52,11 +53,7 @@ export default function SinglePost({ data: { post } }) {
               {...eventImage}
               alt="something"
               width={1000}
-              style={{
-                height: '100%',
-                objectFit: 'cover',
-              }}
-              className="mb-3 w-full rounded md:m-0 md:w-56"
+              className="mb-3 h-full w-full rounded object-cover md:m-0 md:w-56"
             />
             <div className="flex flex-col gap-2">
               {title}
@@ -69,7 +66,7 @@ export default function SinglePost({ data: { post } }) {
                   <BsFillPeopleFill className="h-3 w-3 text-slate-400" />
                   {guests} guests
                 </div>
-                <a
+                <button
                   href={ticketUrl}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -77,7 +74,7 @@ export default function SinglePost({ data: { post } }) {
                 >
                   <IoTicketOutline className="h-4 w-4" />
                   tickets
-                </a>
+                </button>
                 <FaFacebook className="h-6 w-6 text-blue-500" />
               </div>
             </div>
@@ -87,13 +84,18 @@ export default function SinglePost({ data: { post } }) {
     },
   };
 
+  console.log({ post });
+
   return (
     <div className="min-h-full bg-white py-4 md:bg-zinc-200 md:py-16">
       <div className="m-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-12">
         <div className="flex flex-col gap-4 bg-white p-4 md:col-span-8 md:rounded md:p-10 md:shadow">
-          <Seo
-            title={title}
-            // image={props.data.post.featuredImage.image.asset.url}
+          <Seo title={title} image={post.featuredImage.asset.url} />
+          <Image
+            {...featuredImage}
+            width={1000}
+            className="w-full rounded"
+            alt={title}
           />
           <h1 className="text-2xl font-bold md:text-4xl">{title}</h1>
           <p className="self-start rounded bg-slate-800 px-2 py-1 text-sm font-medium text-pink-200">
@@ -124,6 +126,12 @@ export const query = graphql`
         name
       }
       _rawContent(resolveReferences: { maxDepth: 4 })
+      featuredImage {
+        ...ImageWithPreview
+        asset {
+          url
+        }
+      }
     }
   }
 `;

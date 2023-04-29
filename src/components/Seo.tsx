@@ -6,9 +6,10 @@ interface SeoProps {
   children?: ReactNode;
   title?: string;
   location?: Record<string, string>;
+  image?: string;
 }
 
-const Seo = ({ children, location, title }: SeoProps) => {
+const Seo = ({ children, location, title, image }: SeoProps) => {
   return (
     <Helmet titleTemplate={`%s • Feed The Mogul`}>
       <html lang="hu" />
@@ -21,10 +22,18 @@ const Seo = ({ children, location, title }: SeoProps) => {
       <meta charSet="utf-8" />
       <meta
         name="description"
-        content="Budapest based grunge punk stoner rock."
+        content="Grunge stoner punk rock from Budapest"
       />
       {/* Open Graph */}
       {location && <meta property="og:url" content={location.href} />}
+      <meta property="og:image" content={image} />
+      <meta property="og:title" content={title} key="ogtitle" />
+      <meta property="og:site_name" content="Feed The Mogul" key="ogsitename" />
+      <meta
+        property="og:description"
+        content="Grunge stoner punk rock from Budapest"
+        key="ogdesc"
+      />
       {children}
     </Helmet>
   );
