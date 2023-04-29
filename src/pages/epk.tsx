@@ -8,14 +8,15 @@ import {
   FaPhoneAlt,
   FaGlobe,
   FaFacebook,
+  FaFilePdf,
 } from 'react-icons/fa';
-import { SiBandcamp, SiYoutube } from 'react-icons/si';
+import { SiYoutube } from 'react-icons/si';
 import { SlSocialInstagram, SlSocialSpotify } from 'react-icons/sl';
 
 const ElectronicPressKit = () => {
   return (
     <main className="epk-bg min-h-full">
-      <div className="container m-auto flex min-h-full flex-col gap-8 p-3">
+      <div className="container m-auto flex min-h-full flex-col gap-8 p-4">
         <h1 className="mt-6 text-center text-4xl font-bold">Feed The Mogul</h1>
         <section className="flex flex-col gap-4 border-b-2 border-slate-300 pb-8">
           <h2 className="text-2xl font-semibold">Short bio</h2>
@@ -47,8 +48,8 @@ const ElectronicPressKit = () => {
                 rel="noopener noreferrer"
                 className="flex items-center gap-4 rounded border border-slate-300 bg-slate-50 px-2 py-1 no-underline opacity-80"
               >
-                <FaGoogleDrive className="h-8 w-8" /> See more press photos on
-                Google Drive
+                <FaGoogleDrive className="h-8 w-8" />
+                <span>See more photos on Google Drive (EPK)</span>
                 <FaExternalLinkAlt className="h-4 w-4" />
               </a>
             </div>
@@ -113,7 +114,16 @@ const ElectronicPressKit = () => {
                 www.feedthemogul.com
               </a>
             </li>
-            <li></li>
+            <li className="flex items-center gap-2">
+              <FaFilePdf className="h-5 w-5 text-slate-500" />
+              <a
+                href="https://drive.google.com/file/d/11tpmsxIC4XNgz_9L27sNiequKnls4wFr/view?usp=share_link"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                Technical Rider
+              </a>
+            </li>
           </ul>
         </section>
         <div className="flex justify-evenly p-4 pb-8">
