@@ -67,7 +67,8 @@ export default function SinglePost({ data: { post }, location }) {
                   {guests} guests
                 </div>
                 <button
-                  href={ticketUrl}
+                  // href={ticketUrl}
+                  onClick={() => window.open(ticketUrl, '_blank')}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="hidden items-center gap-1 rounded-lg border bg-amber-600 px-2 py-1 text-sm font-normal text-slate-100 no-underline transition-transform hover:scale-105 hover:transform hover:text-slate-100 hover:shadow md:flex"
@@ -83,8 +84,6 @@ export default function SinglePost({ data: { post }, location }) {
       },
     },
   };
-
-  console.log({ location });
 
   return (
     <div className="min-h-full bg-white py-4 md:bg-zinc-200 md:py-16">
