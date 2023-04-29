@@ -16,21 +16,27 @@ import { SlSocialInstagram, SlSocialSpotify } from 'react-icons/sl';
 const ElectronicPressKit = () => {
   return (
     <main className="epk-bg min-h-full">
-      <div className="container m-auto flex min-h-full flex-col gap-8 p-4">
-        <h1 className="mt-6 text-center text-4xl font-bold">Feed The Mogul</h1>
+      <div className="container m-auto flex min-h-full max-w-5xl flex-col gap-8 p-4 md:gap-12">
+        <h1 className="mt-6 text-center text-5xl font-bold md:mb-12 md:text-6xl">
+          <span className="bg-gradient-to-r from-slate-800 to-pink-500 bg-clip-text text-transparent">
+            Feed The Mogul
+          </span>
+        </h1>
         <section className="flex flex-col gap-4 border-b-2 border-slate-300 pb-8">
-          <h2 className="text-2xl font-semibold">Short bio</h2>
-          <div className="flex flex-col gap-4">
-            <p className="text-slate-800">
-              Feed The Mogul is a Hungarian grunge stoner punk rock band hailing
-              from Budapest. Formed in 2019, the idea for the band came from
-              singer Hunor and guitarist Andrew, who played together in the band
-              Babel in the mid-2010s. Influenced by the likes of QOTSA, Fuxx,
-              Osees, Wand, Ty Segall, Idles, Led Zeppelin, and Nirvana, their
-              concerts are known for their high energy performances. Feed The
-              Mogul considers themselves a live band, with a sound that is much
-              better experienced in a live setting.
-            </p>
+          <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+            <div className="flex flex-col gap-4 md:gap-8">
+              <h2 className="text-2xl font-semibold md:text-3xl">Short bio</h2>
+              <p className="text-slate-800">
+                Feed The Mogul is a Hungarian grunge stoner punk rock band
+                hailing from Budapest. Formed in 2019, the idea for the band
+                came from singer Hunor and guitarist Andrew, who played together
+                in the band Babel in the mid-2010s. Influenced by the likes of
+                QOTSA, Fuxx, Osees, Wand, Ty Segall, Idles, Led Zeppelin, and
+                Nirvana, their concerts are known for their high energy
+                performances. Feed The Mogul considers themselves a live band,
+                with a sound that is much better experienced in a live setting.
+              </p>
+            </div>
             <div className="flex flex-col gap-4">
               <StaticImage
                 src="../assets/images/BIK00628.jpg"
@@ -40,23 +46,23 @@ const ElectronicPressKit = () => {
               <StaticImage
                 src="../assets/images/BIK02598_web.jpg"
                 alt="Feed The Mogul band"
-                className="rounded"
+                className="rounded md:hidden"
               />
               <a
                 href="https://drive.google.com/drive/folders/1pFVzsp3ree9uAdT50kTPxTaxdhj_AT9d?usp=sharing"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center gap-4 rounded border border-slate-300 bg-slate-50 px-2 py-1 no-underline opacity-80"
+                className="flex items-center gap-4 rounded border border-slate-300 bg-slate-50 px-2 py-1 no-underline opacity-80 md:px-6 md:py-3 md:shadow"
               >
                 <FaGoogleDrive className="h-8 w-8" />
                 <span>See more photos on Google Drive (EPK)</span>
-                <FaExternalLinkAlt className="h-4 w-4" />
+                <FaExternalLinkAlt className="ml-auto h-4 w-4" />
               </a>
             </div>
           </div>
         </section>
         <section className="flex flex-col gap-4 border-b-2 border-slate-300 pb-8">
-          <h2 className="text-2xl font-semibold">Video</h2>
+          <h2 className="text-2xl font-semibold md:text-3xl">Video</h2>
           <h3 className="text-xl font-medium">Live Sessions</h3>
           <p>
             Recorded in 2022 at Sounday Studio in Budapest, this 6-piece live
@@ -86,15 +92,15 @@ const ElectronicPressKit = () => {
             href="https://www.youtube.com/@FeedTheMogul"
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-4 rounded border border-slate-300 bg-slate-50 px-2 py-1 no-underline opacity-80"
+            className="flex items-center gap-4 rounded border border-slate-300 bg-slate-50 px-2 py-1 no-underline opacity-80 md:px-6 md:py-3 md:shadow"
           >
             <FaYoutube className="h-8 w-8 text-red-600" /> See more videos on
             our YouTube channel
-            <FaExternalLinkAlt className="h-4 w-4" />
+            <FaExternalLinkAlt className="ml-auto h-4 w-4" />
           </a>
         </section>
         <section className="flex flex-col gap-4 border-b-2 border-slate-300 pb-8">
-          <h2 className="my-3 text-2xl font-semibold">Reach us</h2>
+          <h2 className="my-3 text-2xl font-semibold md:text-3xl">Reach us</h2>
           <ul className="flex flex-col gap-4">
             <li className="flex items-center gap-2">
               <FaEnvelope className="h-5 w-5 text-slate-500" />
