@@ -16,6 +16,7 @@ const Seo = ({ children, location, title, image }: SeoProps) => {
       <title>{title}</title>
       {/* Fav Icons */}
       <link rel="icon" type="image/png" href="/favicon-pink-512x512.png" />
+      {location && <link rel="canonical" href={location.href} />}
       {/* <link rel='alternate icon' href='/icon.ico' /> */}
       {/* Meta Tags */}
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
