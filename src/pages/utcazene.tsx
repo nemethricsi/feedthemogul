@@ -23,7 +23,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#acoustic-video"
-              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline md:py-2"
+              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline hover:text-inherit md:py-2"
             >
               <span>Látható és hallható</span>
               <MusicalNoteIcon className="h-4 w-4 text-white" />
@@ -32,7 +32,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#introduction"
-              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline md:py-2"
+              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline hover:text-inherit md:py-2"
             >
               <span>Bio</span>
               <NewspaperIcon className="h-4 w-4 text-white" />
@@ -41,7 +41,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#references"
-              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline md:py-2"
+              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline hover:text-inherit md:py-2"
             >
               <span>Egyéb referenciák</span>
               <PencilSquareIcon className="h-4 w-4 text-white" />
@@ -50,7 +50,7 @@ const UtcazenePage: React.FC<PageProps> = () => {
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
             <a
               href="#contact"
-              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline md:py-2"
+              className="flex h-full w-full items-center justify-center gap-2 bg-none px-4 py-3 text-sm text-inherit no-underline hover:text-inherit md:py-2"
             >
               <span>Elérhetőségek</span>
               <ChatBubbleLeftRightIcon className="h-4 w-4 text-white" />
@@ -166,6 +166,17 @@ const UtcazenePage: React.FC<PageProps> = () => {
           role="list"
           className="list-disc space-y-3 pl-5 text-slate-400 marker:text-sky-400"
         >
+          <li>
+            <a
+              href="https://recorder.blog.hu/2023/04/28/magyarradar_es_videopremier_feed_the_mogul_lenkke"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ display: 'block' }}
+            >
+              Egy sérelmekkel teli kapcsolatba ragadt pár őrülete. Magyarradar
+              és videópremier. (Recorder)
+            </a>
+          </li>
           <li>
             <a
               href="https://f21.hu/zene/feed_the_mogul_interju"

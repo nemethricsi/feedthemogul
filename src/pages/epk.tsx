@@ -21,7 +21,7 @@ const ElectronicPressKit = () => {
         title="Electronic Press Kit"
         image="https://www.feedthemogul.com/static/a6c92f17af0c240174ecf8b9b5e73296/94b20/BIK00628.webp"
       />
-      <main className="epk-bg min-h-full md:text-lg">
+      <main className="min-h-full md:text-lg">
         <div className="container m-auto flex min-h-full max-w-6xl flex-col gap-8 p-4 md:gap-12">
           <h1 className="mt-6 text-center text-4xl font-bold md:mb-12 md:text-6xl">
             <span className="bg-gradient-to-r from-slate-800 to-pink-500 bg-clip-text text-transparent">

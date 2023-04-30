@@ -15,7 +15,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
   return (
     <>
       <Seo title="Főoldal" />
-      <main className="min-h-full bg-zinc-200">
+      <main className="min-h-full">
         <div className="container m-auto">
           <div className="pt-10 md:py-10">
             <div className="flex justify-center">
