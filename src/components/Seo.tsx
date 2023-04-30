@@ -14,6 +14,17 @@ const Seo = ({ children, location, title, image }: SeoProps) => {
     <Helmet titleTemplate={`%s • Feed The Mogul`}>
       <html lang="hu" />
       <title>{title}</title>
+      {/* Open Graph */}
+      {location && <meta property="og:url" content={location.href} />}
+      <meta property="og:image" content={image} />
+      <meta property="og:title" content={title} />
+      <meta property="og:type" content="article" />
+      <meta property="og:site_name" content="Feed The Mogul" key="ogsitename" />
+      <meta
+        property="og:description"
+        content="Grunge stoner punk rock from Budapest"
+        key="ogdesc"
+      />
       {/* Fav Icons */}
       <link rel="icon" type="image/png" href="/favicon-pink-512x512.png" />
       {location && <link rel="canonical" href={location.href} />}
@@ -30,17 +41,6 @@ const Seo = ({ children, location, title, image }: SeoProps) => {
         property="keywords"
         content="grunge,stoner rock,punk,rock music,live concert"
       ></meta>
-      {/* Open Graph */}
-      {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image} />
-      <meta property="og:title" content={title} />
-      <meta property="og:type" content="article" />
-      <meta property="og:site_name" content="Feed The Mogul" key="ogsitename" />
-      <meta
-        property="og:description"
-        content="Grunge stoner punk rock from Budapest"
-        key="ogdesc"
-      />
       {children}
     </Helmet>
   );
