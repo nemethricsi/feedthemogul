@@ -34,12 +34,12 @@ export default function SinglePost({ data: { post }, location }) {
   };
 
   return (
-    <div className="min-h-full bg-white py-4 md:bg-zinc-200 md:py-16">
+    <div className="min-h-full bg-white py-4 md:bg-transparent md:py-16">
       <div className="m-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-12">
         <div className="flex flex-col gap-4 bg-white p-4 md:col-span-8 md:rounded md:p-10 md:shadow">
           <Seo
             title={title}
-            image={post.featuredImage.asset.url}
+            image={`${post.featuredImage.asset.url}?w=1200&h=630`}
             location={location}
           />
           <Image
