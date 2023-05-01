@@ -1,49 +1,56 @@
-import React from 'react';
-import type { ReactNode } from 'react';
-import { Helmet } from 'react-helmet';
+import * as React from 'react';
+import { useSiteMetadata } from '../hooks/use-site-metadata';
 
 interface SeoProps {
-  children?: ReactNode;
   title?: string;
-  location?: Record<string, string>;
+  description?: string;
+  pathname?: string;
+  children?: React.ReactNode;
   image?: string;
 }
 
-const Seo = ({ children, location, title, image }: SeoProps) => {
+export const Seo = ({
+  title,
+  description,
+  pathname,
+  children,
+  image,
+}: SeoProps) => {
+  const {
+    title: defaultTitle,
+    description: defaultDescription,
+    image: defaultImage,
+    siteUrl,
+  } = useSiteMetadata();
+
+  const seo = {
+    title: title || defaultTitle,
+    description: description || defaultDescription,
+    image: image || `${siteUrl}${defaultImage}`,
+    url: `${siteUrl}${pathname || ``}`,
+  };
+
   return (
-    <Helmet titleTemplate={`%s • Feed The Mogul`}>
-      <html lang="hu" />
-      <title>{title}</title>
-      {/* Open Graph */}
-      {location && <meta property="og:url" content={location.href} />}
-      <meta property="og:image" content={image} />
-      <meta property="og:title" content={title} />
-      <meta property="og:type" content="article" />
-      <meta property="og:site_name" content="Feed The Mogul" key="ogsitename" />
-      <meta
-        property="og:description"
-        content="Grunge stoner punk rock from Budapest"
-        key="ogdesc"
-      />
-      {/* Fav Icons */}
-      <link rel="icon" type="image/png" href="/favicon-pink-512x512.png" />
-      {location && <link rel="canonical" href={location.href} />}
-      {/* <link rel='alternate icon' href='/icon.ico' /> */}
-      {/* Meta Tags */}
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <meta charSet="utf-8" />
-      <meta
-        name="description"
-        content="Grunge stoner punk rock from Budapest"
-      />
+    <>
+      <title>{`${seo.title} • Feed The Mogul`}</title>
+      <meta name="description" content={seo.description} />
+      <meta name="image" content={seo.image} />
+      <link rel="canonical" href={seo.url} />
       <meta
         name="keywords"
         property="keywords"
         content="grunge,stoner rock,punk,rock music,live concert"
-      ></meta>
+      />
+      <meta name="twitter:card" content="summary_large_image" />
+      <meta name="twitter:title" content={seo.title} />
+      <meta name="twitter:url" content={seo.url} />
+      <meta name="twitter:description" content={seo.description} />
+      <meta property="og:title" content={seo.title} />
+      <meta property="og:description" content={seo.description} />
+      <meta property="og:url" content={seo.url} />
+      <meta property="og:image" content={seo.image} />
+      <link rel="icon" type="image/png" href="/favicon-pink-512x512.png" />
       {children}
-    </Helmet>
+    </>
   );
 };
-
-export default Seo;

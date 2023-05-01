@@ -1,7 +1,6 @@
 import * as React from 'react';
-import type { PageProps } from 'gatsby';
+import type { PageProps, HeadFC } from 'gatsby';
 import { StaticImage } from 'gatsby-plugin-image';
-import Seo from '../components/Seo';
 import SubscriptionWidget from '../components/SubscriptionWidget';
 import { SiBandcamp, SiYoutube, SiDeezer, SiTidal } from 'react-icons/si';
 import {
@@ -10,11 +9,11 @@ import {
   SlSocialSpotify,
   SlSocialSoundcloud,
 } from 'react-icons/sl';
+import { Seo } from '../components/Seo';
 
 const IndexPage: React.FC<PageProps> = (props) => {
   return (
     <>
-      <Seo title="Főoldal" />
       <main className="min-h-full">
         <div className="container m-auto">
           <div className="pt-10 md:py-10">
@@ -116,3 +115,7 @@ const IndexPage: React.FC<PageProps> = (props) => {
 };
 
 export default IndexPage;
+
+export const Head: HeadFC = () => {
+  return <Seo title="Home" />;
+};

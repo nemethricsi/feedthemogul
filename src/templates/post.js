@@ -2,13 +2,13 @@ import React from 'react';
 import { graphql } from 'gatsby';
 import { PortableText } from '@portabletext/react';
 import SubscriptionWidget from '../components/SubscriptionWidget';
-import Seo from '../components/Seo';
+import { Seo } from '../components/Seo';
 import dayjs from 'dayjs';
 import Image from 'gatsby-plugin-sanity-image';
 import { FacebookEvent } from '../components/FacebookEvent';
 import { EmbedYoutube } from '../components/EmbedYoutube';
 
-export default function SinglePost({ data: { post }, location }) {
+export default function SinglePost({ data: { post } }) {
   const {
     title,
     _rawContent: portableText,
@@ -37,11 +37,6 @@ export default function SinglePost({ data: { post }, location }) {
     <div className="min-h-full bg-white py-4 md:bg-transparent md:py-16">
       <div className="m-auto grid max-w-6xl grid-cols-1 gap-6 md:grid-cols-12">
         <div className="flex flex-col gap-4 bg-white p-4 md:col-span-8 md:rounded md:p-10 md:shadow">
-          <Seo
-            title={title}
-            image={`${post.featuredImage.asset.url}?w=1200&h=630`}
-            location={location}
-          />
           <Image
             {...featuredImage}
             width={1000}
@@ -66,6 +61,18 @@ export default function SinglePost({ data: { post }, location }) {
     </div>
   );
 }
+
+export const Head = ({ data: { post }, location }) => {
+  const { title, featuredImage } = post;
+
+  return (
+    <Seo
+      title={title}
+      image={`${featuredImage.asset.url}?w=1200&h=630`}
+      pathname={location.pathname}
+    />
+  );
+};
 
 export const query = graphql`
   query ($slug: String!) {

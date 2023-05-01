@@ -12,12 +12,12 @@ import {
   NewspaperIcon,
   PencilSquareIcon,
 } from '@heroicons/react/24/solid';
-import Seo from '../components/Seo';
+import { Seo } from '../components/Seo';
 
 const UtcazenePage: React.FC<PageProps> = () => {
   return (
     <main className="min-h-full md:py-12">
-      <Seo title="Utcazene pályázat" />
+      {/* <Seo title="Utcazene pályázat" /> */}
       <div className="m-auto flex max-w-3xl flex-col gap-5 rounded bg-white p-4 shadow-lg md:p-8">
         <ul className="flex list-none flex-col flex-wrap justify-center gap-2 md:flex-row md:justify-between">
           <li className="rounded-lg bg-violet-800 text-white hover:bg-violet-600">
@@ -256,4 +256,6 @@ const UtcazenePage: React.FC<PageProps> = () => {
 
 export default UtcazenePage;
 
-export const Head: HeadFC = () => <title>Utcazene Pályázat</title>;
+export const Head: HeadFC = () => {
+  return <Seo title="Utcazene pályázat" />;
+};
