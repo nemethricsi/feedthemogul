@@ -32,11 +32,11 @@ const ElectronicPressKit = () => {
                   Short bio
                 </h2>
                 <p className="text-slate-800">
-                  Feed The Mogul is a Hungarian grunge stoner punk rock band
+                  Feed The Mogul is a Hungarian grunge-stoner-punk rock band
                   hailing from Budapest. Formed in 2019, the idea for the band
                   came from singer Hunor and guitarist Andrew, who played
                   together in the band Babel in the mid-2010s. Influenced by the
-                  likes of QOTSA, Fuxx, Osees, Wand, Ty Segall, Idles, Led
+                  likes of QOTSA, Fuzz, Osees, Wand, Ty Segall, Idles, Led
                   Zeppelin, and Nirvana, their concerts are known for their high
                   energy performances. Feed The Mogul considers themselves a
                   live band, with a sound that is much better experienced in a

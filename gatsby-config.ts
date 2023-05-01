@@ -9,7 +9,7 @@ const config: GatsbyConfig = {
     title: `Feed The Mogul`,
     description: `Grunge Stoner Punk Rock from Budapest.`,
     siteUrl: `https://www.feedthemogul.com`,
-    image: `/BIK00628.jpg`,
+    image: `/BIK00628-og.png`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
